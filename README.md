@@ -1,1 +1,2 @@
-# mackenzie
+### COLLEGE PROGRAMMING EXERCISES 
+
