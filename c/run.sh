@@ -1,6 +1,6 @@
 clear
 
-file="dynamic_allocation.c"
+file="pointers.c"
 
 
 cc ${file}
