@@ -52,8 +52,8 @@ Animal::Animal(string name, double height, double weight){
 }
 Animal::Animal(){
     this->name = "";
-    this->height = "";
-    this->weight = "";
+    this->height = 0;
+    this->weight = 0;
     Animal::numOfAnimals++;
 }
 

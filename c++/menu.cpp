@@ -86,7 +86,7 @@ string findMaxAndMin()
 
     return "Max is " + to_string(max) + " and min is " + to_string(min);
 }
-
+// OPTION 6
 void selection_sort()
 {
     for (int i = 0; i < 10; i++)
@@ -106,7 +106,7 @@ void selection_sort()
 
     cout << "\nArray successfully sorted ";
 }
-
+// OPTION 7
 void invert_array(int arr[]) 
 { 
     int start = 0;
@@ -120,15 +120,36 @@ void invert_array(int arr[])
         end--; 
     }  
 } 
+// OPTION 8
+int *new_sorted_array()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        int min = i;
+        for (int j = i + 1; j < 10; j++)
+        {
+            if (numbers[min] > numbers[j])
+            {
+                min = j;
+            }
+        }
+        int temp = numbers[min];
+        numbers[min] = numbers[i];
+        numbers[i] = temp;
+    }
 
-
+    return numbers;
+}
+// HELPER FUNCTION
 void print_array(int array[], int size){
     for(int i = 0; i < size; i++){
         cout << array[i] <<" ";
     }
 }
+
 int main()
 {
+    int *new_array;
     for (int i = 0; i < 10; i++)
     {
         numbers[i] = 0;
@@ -205,6 +226,10 @@ int main()
         }
         else if(choice == 8){
             
+            new_array = new_sorted_array();
+            cout << "new array sorted " <<endl;
+            print_array(new_array,10);
+
         }   
     }
 
