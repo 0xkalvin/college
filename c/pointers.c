@@ -7,7 +7,7 @@ int main()
    // creates a pointer that points to a integer variable
    int *p;
 
-   // now p points to x 
+   // now p points to x, which means p stores the value of x
    p = &x;
 
    //
