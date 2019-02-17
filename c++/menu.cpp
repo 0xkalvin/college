@@ -3,6 +3,7 @@ using namespace std;
 
 int numbers[10];
 
+// OPTION 1
 void print(){
     cout << "[";
     for(int i = 0; i < 10; i++){
@@ -10,7 +11,7 @@ void print(){
     }
     cout << "]";
 }
-
+// OPTION 2
 string addElement(int n, int position){
 
     position--;
@@ -24,7 +25,7 @@ string addElement(int n, int position){
     numbers[position] = n;
     return "Added it successfully! ";
 }
-
+// OPTION 3
 string deleteElement(int position){
     position--;
     if(position < 1 || position > 10){
@@ -36,7 +37,7 @@ string deleteElement(int position){
     numbers[position] = 0;
     return "Number deleted successfully! ";
 }
-
+// OPTION 4
 string exchangeElementsPosition(int pos1, int pos2){
     pos1--;
     pos2--;
@@ -53,6 +54,23 @@ string exchangeElementsPosition(int pos1, int pos2){
 
     return "elements position exchanged successfully! ";
 }
+// OPTION 5
+string findMaxAndMin(){
+    int max, min;
+    max = numbers[0];
+    min = numbers[0];
+
+    for(int i = 1; i < 10; i++){
+        if(numbers[i] > max){
+            max = numbers[i];
+        }
+        else if(numbers[i] < min){
+            min = numbers[i];
+        }
+    }
+
+    return "Max is " + to_string(max) + " and min is " + to_string(min);
+}
 
 int main()
 {
@@ -60,10 +78,9 @@ int main()
     {
         numbers[i] = 0;
     }
-
+    system("clear");
     while (true)
     {
-        system("clear");
         cout << "\n";
         cout << "------ ARRAY MENU --------";
         cout << "\n0 - exit.";
@@ -108,6 +125,9 @@ int main()
             cin >> pos1;
             cin >> pos2;
             cout << exchangeElementsPosition(pos1, pos2) <<endl;
+        }
+        else if(choice == 5){
+            cout << findMaxAndMin()<<endl;
         }
 
     }
