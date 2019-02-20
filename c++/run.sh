@@ -1,11 +1,11 @@
-cd 002
+cd 003
 
 
-file="menu.cpp"
+file="main.cpp"
 
 
 
-g++ ${file} adtArray.cpp
+g++ ${file} integer.cpp natural.cpp
 
 
 ./a.out

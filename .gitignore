@@ -3,3 +3,8 @@
 /node_modules
 
 .vscode/
+
+/c++/001/a.out
+/c++/002/a.out
+/c++/003/a.out
+/c++/a.out
