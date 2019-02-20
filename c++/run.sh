@@ -5,7 +5,7 @@ file="menu.cpp"
 
 
 
-g++ ${file}
+g++ ${file} adtArray.cpp
 
 
 ./a.out

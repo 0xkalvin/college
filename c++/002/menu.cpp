@@ -11,7 +11,7 @@ int main()
     adtArray array;
 
 
-    system("clear");
+    //system("clear");
     while (true)
     {
         cout << "\n";
@@ -37,7 +37,7 @@ int main()
         }
         else if (choice == 1)
         {
-            array.print();
+            array.print(array.getNumbers());
         }
         else if (choice == 2)
         {
@@ -70,20 +70,20 @@ int main()
         }
         else if (choice == 6)
         {
-            array.selection_sort();
+            array.selectionSort();
             cout << "by ascending order! " << endl;
             
         }
         else if (choice == 7)
         {
-            array.selection_sort();
-            array.invert_array(array.get_numbers());
+            array.selectionSort();
+            array.invertArray(array.getNumbers());
             cout << "by descending order! " << endl;
         
         }
         else if(choice == 8){
             
-            new_array = array.new_sorted_array();
+            new_array = array.newSortedArray();
             cout << "new array sorted " <<endl;
 
         }   

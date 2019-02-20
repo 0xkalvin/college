@@ -10,14 +10,14 @@ adtArray::adtArray()
     }
 }
 
-void adtArray::print()
+void adtArray::print(int array[])
 {
     cout << "[";
     for (int i = 0; i < SIZE; i++)
     {
-        cout << numbers[i] << " ";
+        cout << array[i] << " ";
     }
-    cout << "]";
+    cout << "]"<<endl;
 }
 
 string adtArray::addElement(int n, int position)
@@ -92,7 +92,7 @@ string adtArray::findMaxAndMin()
     return "Max is " + to_string(max) + " and min is " + to_string(min);
 }
 
-void adtArray::selection_sort()
+void adtArray::selectionSort()
 {
     for (int i = 0; i < SIZE; i++)
     {
@@ -112,7 +112,7 @@ void adtArray::selection_sort()
     cout << "\nArray successfully sorted ";
 }
 
-void adtArray::invert_array(int arr[]) 
+void adtArray::invertArray(int arr[]) 
 { 
     int start = 0;
     int end = SIZE-1;
@@ -126,7 +126,7 @@ void adtArray::invert_array(int arr[])
     }  
 } 
 
-int* adtArray::new_sorted_array()
+int* adtArray::newSortedArray()
 {
     for (int i = 0; i < SIZE; i++)
     {
@@ -143,9 +143,11 @@ int* adtArray::new_sorted_array()
         numbers[i] = temp;
     }
 
+    print(numbers);
+
     return numbers;
 }
 
-int* adtArray::get_numbers(){
+int* adtArray::getNumbers(){
     return numbers;
 }

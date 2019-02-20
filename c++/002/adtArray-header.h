@@ -13,13 +13,13 @@ class adtArray {
     
     public:
         adtArray();
-        void print();
+        void print(int array[]);
         string addElement(int n, int position);
         string deleteElement(int position); 
         string exchangeElementsPosition(int pos1, int pos2);
         string findMaxAndMin();
-        void selection_sort();
-        void invert_array(int arr[]);
-        int *new_sorted_array();
-        int *get_numbers();
+        void selectionSort();
+        void invertArray(int arr[]);
+        int *newSortedArray();
+        int *getNumbers();
 };
