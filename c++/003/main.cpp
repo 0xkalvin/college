@@ -9,43 +9,51 @@ using namespace std;
 int main()
 {
     
-    Natural a1(10);
-    Natural b1(15);
+    Natural nat1(10);
+    Natural nat2(15);
     
     // without operator overloading
-    Natural c1 = a1.add(b1);
+    Natural nat3 = nat1.add(nat2);
 
     // operator overloading working fine
-    Natural sum1 = a1 + b1;
-    Natural m1 = a1 * b1;
+    Natural nat4 = nat1 + nat2;
+    Natural nat5 = nat1 * nat2;
 
     
-    cout <<"NATURAL SUM  " <<c1.print() <<endl;
-    cout <<"NATURAL SUM OPERATOR " <<sum1.print() <<endl;
-    cout <<"NATURAL MULTIPLY OPERATOR " <<m1.print() <<endl;
+    cout <<"NATURAL SUM  " <<nat3.print() <<endl;
+    cout <<"NATURAL SUM OPERATOR " <<nat4.print() <<endl;
+    cout <<"NATURAL MULTIPLY OPERATOR " <<nat5.print() <<endl;
 
     // ========================================================================================================
 
-    Integer a2(9);
-    Integer b2(7);
+    Integer int1(9);
+    Integer int2(7);
     
     // without operator overloading
-    Integer c2 = a2.add(b2);
+    Integer int3 = int1.add(int2);
 
     // operator overloading working fine
-    Integer sum2 = a2 + b2;
+    Integer int4 = int1 + int2;
 
     
-    cout <<"\n\nInteger  " <<c2.print() <<endl;
-    cout <<"Integer OPERATOR " <<sum2.print() <<endl;
+    cout <<"\n\nInteger  " <<int3.print() <<endl;
+    cout <<"Integer OPERATOR " <<int4.print() <<endl;
 
     // ========================================================================================================
 
-    Rational a3(3,4);
-    Rational b3(1,2);
+    Rational rat1(3,4);
+    Rational rat2(1,2);
 
-    Rational r = a3 / b3;
-    cout <<"\n\nRATIONAL "<<r.print() <<endl;
+    Rational r1 = rat1 + rat2;
+    Rational r2 = rat1 - rat2;
+    Rational r3 = rat1 * rat2;
+    Rational r4 = rat1 / rat2;
+
+    cout <<"\n\nRATIONAL SUM "<<r1.print() <<endl;
+    cout <<"\n\nRATIONAL SUB "<<r2.print() <<endl;
+    cout <<"\n\nRATIONAL MULT "<<r3.print() <<endl;
+    cout <<"\n\nRATIONAL DIV "<<r4.print() <<endl;
+
 
     return 0;
 }

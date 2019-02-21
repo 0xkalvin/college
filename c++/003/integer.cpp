@@ -14,24 +14,35 @@ int Integer::getValue(){
     return value;
 }
 
+string Integer::print(){
+    return to_string(value);
+}
+
 Integer Integer::suc(){
     Integer n(value + 1);
     return n;
 }
 
 Integer Integer::add(Integer n){
-    Integer sum(value + n.getValue());
-    return sum;
+    Integer s(value + n.getValue());
+    return s;
 }
 
-string Integer::print(){
-    return to_string(value);
+Integer Integer::sub(Integer n){
+    Integer s(value - n.getValue());
+    return s;
 }
 
-Integer Integer::multiply(Integer n){
+Integer Integer::mul(Integer n){
     Integer m(value * n.getValue());
     return m;
 }
+
+Integer Integer::div(Integer n){
+    Integer d(value / n.getValue());
+    return d;
+}
+
 Integer Integer::operator+(Integer n){
     Integer sum(value + n.getValue());
     return sum;

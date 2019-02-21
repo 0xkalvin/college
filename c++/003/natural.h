@@ -10,10 +10,10 @@ class Natural{
     public:
         Natural(int v);
         ~Natural();
+        std::string print();
         Natural suc();
         Natural add(Natural n);
-        std::string print();
-        Natural multiply(Natural n);
+        Natural mul(Natural n);
         Natural operator+(Natural n);
         Natural operator*(Natural n);
 
