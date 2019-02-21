@@ -16,7 +16,7 @@ double Rational::getValue(){
 }
 
 Rational Rational::add(Rational n){
-    Rational s(n.getValue() + value);
+    Rational s(n.getValue() + value, 1);
     return s;
 }
 

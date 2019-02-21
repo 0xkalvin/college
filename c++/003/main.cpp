@@ -43,7 +43,7 @@ int main()
 
     Rational a3(3,4);
 
-    cout << a3.print() <<endl;
+    cout <<"\n\nRATIONAL "<<a3.print() <<endl;
 
     return 0;
 }
