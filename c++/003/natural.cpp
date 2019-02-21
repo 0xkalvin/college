@@ -32,3 +32,8 @@ Natural Natural::multiply(Natural n){
     Natural m(value * n.getValue());
     return m;
 }
+
+Natural Natural::operator+(Natural n){
+    Natural sum(value + n.getValue());
+    return sum;
+}

@@ -11,7 +11,7 @@ int main()
     adtArray array;
 
 
-    //system("clear");
+    system("clear");
     while (true)
     {
         cout << "\n";

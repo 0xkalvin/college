@@ -15,5 +15,6 @@ class Integer{
         Integer add(Integer n);
         std::string print();
         Integer multiply(Integer n);
+        Integer operator+(Integer n);
 
 };

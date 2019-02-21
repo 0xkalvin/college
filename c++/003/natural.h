@@ -1,6 +1,5 @@
-#include <stdlib.h>
-#include <iostream>
-
+#ifndef	NATURAL_H
+#define	NATURAL_H
 
 class Natural{
 
@@ -15,5 +14,8 @@ class Natural{
         Natural add(Natural n);
         std::string print();
         Natural multiply(Natural n);
+        Natural operator+(Natural n);
 
 };
+
+#endif

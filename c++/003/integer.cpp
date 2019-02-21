@@ -32,3 +32,7 @@ Integer Integer::multiply(Integer n){
     Integer m(value * n.getValue());
     return m;
 }
+Integer Integer::operator+(Integer n){
+    Integer sum(value + n.getValue());
+    return sum;
+}
