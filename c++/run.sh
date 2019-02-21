@@ -5,7 +5,7 @@ file="main.cpp"
 
 
 
-g++ ${file} integer.cpp natural.cpp
+g++ ${file} integer.cpp natural.cpp rational.cpp
 
 
 ./a.out

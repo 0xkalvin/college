@@ -2,14 +2,13 @@
 #include <iostream>
 #include "integer.h"
 #include "natural.h"
+#include "rational.h"
 
 using namespace std;
 
 int main()
 {
     
-
-
     Natural a1(10);
     Natural b1(15);
     
@@ -25,6 +24,8 @@ int main()
     cout <<"NATURAL SUM OPERATOR " <<sum1.print() <<endl;
     cout <<"NATURAL MULTIPLY OPERATOR " <<m1.print() <<endl;
 
+    // ========================================================================================================
+
     Integer a2(9);
     Integer b2(7);
     
@@ -38,7 +39,11 @@ int main()
     cout <<"\n\nInteger  " <<c2.print() <<endl;
     cout <<"Integer OPERATOR " <<sum2.print() <<endl;
 
-    
+    // ========================================================================================================
+
+    Rational a3(3,4);
+
+    cout << a3.print() <<endl;
 
     return 0;
 }
