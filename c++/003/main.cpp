@@ -42,8 +42,10 @@ int main()
     // ========================================================================================================
 
     Rational a3(3,4);
+    Rational b3(1,2);
 
-    cout <<"\n\nRATIONAL "<<a3.print() <<endl;
+    Rational r = a3 / b3;
+    cout <<"\n\nRATIONAL "<<r.print() <<endl;
 
     return 0;
 }
