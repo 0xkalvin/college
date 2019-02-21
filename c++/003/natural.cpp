@@ -37,3 +37,7 @@ Natural Natural::operator+(Natural n){
     Natural sum(value + n.getValue());
     return sum;
 }
+Natural Natural::operator*(Natural n){
+    Natural m(value * n.getValue());
+    return m;
+}

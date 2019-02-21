@@ -17,11 +17,13 @@ int main()
     Natural c1 = a1.add(b1);
 
     // operator overloading working fine
-    Natural d1 = a1 + b1;
+    Natural sum1 = a1 + b1;
+    Natural m1 = a1 * b1;
 
     
-    cout <<"NATURAL  " <<c1.print() <<endl;
-    cout <<"NATURAL OPERATOR " <<d1.print() <<endl;
+    cout <<"NATURAL SUM  " <<c1.print() <<endl;
+    cout <<"NATURAL SUM OPERATOR " <<sum1.print() <<endl;
+    cout <<"NATURAL MULTIPLY OPERATOR " <<m1.print() <<endl;
 
     Integer a2(9);
     Integer b2(7);
@@ -30,11 +32,11 @@ int main()
     Integer c2 = a2.add(b2);
 
     // operator overloading working fine
-    Integer d2 = a2 + b2;
+    Integer sum2 = a2 + b2;
 
     
     cout <<"\n\nInteger  " <<c2.print() <<endl;
-    cout <<"Integer OPERATOR " <<d2.print() <<endl;
+    cout <<"Integer OPERATOR " <<sum2.print() <<endl;
 
     
 

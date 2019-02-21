@@ -15,6 +15,7 @@ class Natural{
         std::string print();
         Natural multiply(Natural n);
         Natural operator+(Natural n);
+        Natural operator*(Natural n);
 
 };
 
