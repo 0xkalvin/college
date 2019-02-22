@@ -1,6 +1,6 @@
 clear
 
-file="struct.c"
+file="linkedList.c"
 
 
 cc ${file}

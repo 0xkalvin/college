@@ -48,7 +48,5 @@ int main(){
     printf("X value for this Point type is  %d \n\n", p1.x);
     printf("The new integer type variable has the value %d\n", a);
 
-
-    
-
+    return 0;
 }

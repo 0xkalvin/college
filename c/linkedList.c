@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// defining type Node which has a value and a pointer to the next element 
+typedef struct Node{
+    int value;
+    struct Node *next;
+}Node;
+
+// takes a 
+void printList(Node *n){  
+    printf("[ ");
+    while(n != NULL){
+        if(n->next == NULL) printf(" %d", n->value);
+        else    printf(" %d,", n->value);
+
+        n = n->next;
+    }
+    printf(" ]");
+    printf("\n\n");
+}
+
+Node *basicLinkedList(){
+    
+    Node *head = NULL;
+    Node *second = NULL;
+    Node *third = NULL;
+    
+    // allocate 2 nodes 
+    head = (Node*)malloc(sizeof(Node));
+    second = (Node*)malloc(sizeof(Node));
+    third = (Node*)malloc(sizeof(Node));
+    
+    head->value = 10;     // assign value in first node
+    head->next = second; // link first node with the second node
+
+    second->value = 20;
+    second->next = third;
+
+    third->value = 30;
+    third->next = NULL; // there`s no next element, so list ends here
+
+    return head;
+}
+
+// ====================> TO DO:
+// now that`s tricky 
+Node *createDynamicLinkedList(int size){
+
+    Node *head;
+    Node *current;
+  
+    int i=0;
+    
+    while(i < size){
+        head->value = i;
+        Node *next;
+        head->next = next;
+        
+        i++;
+    }
+
+    return head;
+    
+}
+
+
+int main(){
+
+    int size = 10;
+    Node *myBasicList = basicLinkedList();
+    printList(myBasicList);
+
+    Node *myDynamicList = createDynamicLinkedList(size);
+    printList(myDynamicList);
+   
+    
+   
+
+    return 0;
+}
