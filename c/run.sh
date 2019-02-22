@@ -1,6 +1,6 @@
 clear
 
-file="pointers.c"
+file="struct.c"
 
 
 cc ${file}
