@@ -28,20 +28,12 @@ Integer Integer::add(Integer n){
     return s;
 }
 
-Integer Integer::sub(Integer n){
-    Integer s(value - n.getValue());
-    return s;
-}
 
 Integer Integer::mul(Integer n){
     Integer m(value * n.getValue());
     return m;
 }
 
-Integer Integer::div(Integer n){
-    Integer d(value / n.getValue());
-    return d;
-}
 
 Integer Integer::operator+(Integer n){
     Integer sum(value + n.getValue());

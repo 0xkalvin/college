@@ -13,7 +13,7 @@ class Rational{
         std::string print();
         Rational add(Rational n);
         Rational sub(Rational n);
-        Rational multiply(Rational n);
+        Rational mul(Rational n);
         Rational div(Rational n);
         Rational operator+(Rational n);
         Rational operator-(Rational n);

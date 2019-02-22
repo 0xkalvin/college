@@ -29,7 +29,7 @@ Rational Rational::sub(Rational n){
     return s;
 }
 
-Rational Rational::multiply(Rational n){
+Rational Rational::mul(Rational n){
     Rational m(n.getValue() * value, 1);
     return m;
 }
