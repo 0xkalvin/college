@@ -36,6 +36,7 @@ int main(){
 
     struct User jack;
     Point p1;
+    Book newBook;
 
     jack.age = 25;
     p1.x = 1;
