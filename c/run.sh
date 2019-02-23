@@ -1,6 +1,6 @@
 clear
 
-file="linkedList.c"
+file="sorting.c"
 
 
 cc ${file}
