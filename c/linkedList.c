@@ -47,20 +47,19 @@ Node *basicLinkedList(){
 // now that`s tricky 
 Node *createDynamicLinkedList(int size){
 
-    Node *head;
-    Node *current;
-  
-    int i=0;
-    
-    while(i < size){
-        head->value = i;
-        Node *next;
-        head->next = next;
-        
-        i++;
-    }
+    Node head;
+    head.next = NULL;
 
-    return head;
+    Node *current = &head;
+
+    for(int i = 0; i < size; i++){
+        current->next = malloc(sizeof*(current->next));
+        current = current->next;
+        current->value = i*10;
+        current->next = NULL;
+    }    
+
+    return head.next;
     
 }
 
