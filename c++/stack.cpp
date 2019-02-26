@@ -57,10 +57,15 @@ void Stack::printStack(){
 int main(){
 
     Stack s1;
+    int size;
 
-    s1.push(10);
-    s1.push(20);
-    s1.push(30);
+    cout << "enter the size of the stack"<<endl;
+    cin >> size;
+
+    for(int i = 0; i < size; i++){
+        s1.push(i*10);
+    }
+    
     s1.printStack();
 
 
