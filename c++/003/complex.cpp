@@ -20,10 +20,6 @@ double Complex::getImaginary(){
     return imaginary;
 }
 
-string Complex::printComplex(){
-    if(this->getImaginary() >= 0) return to_string(this->getReal()) + "+" + to_string(this->getImaginary()) + "i";
-    else return to_string(this->getReal()) + to_string(this->getImaginary()) + "i";
-}
 
 Complex Complex::add(Complex n){
     // ( a + bi ) + ( c + di ) = ( a + c ) + ( b + d ) i
@@ -69,4 +65,10 @@ Complex Complex::operator*(Complex n){
     double imaginaryPart = (real + n.getImaginary()) + (imaginary + n.getReal());
     Complex m(realPart, imaginaryPart);
     return m;
-} 
+}
+
+
+std::ostream &operator<<(std::ostream &os, Complex &n) { 
+    if(n.getImaginary() >= 0) return os << to_string(n.getReal()) + "+" + to_string(n.getImaginary()) + "i";
+    else return os << to_string(n.getReal()) + to_string(n.getImaginary()) + "i";
+}

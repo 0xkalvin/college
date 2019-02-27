@@ -63,13 +63,13 @@ int main()
     Complex c4 = c1 + c2;
     Complex c5 = c1 + c2;
 
-    cout <<"C1 " <<c1.printComplex()<<endl;
-    cout <<"C2 " <<c2.printComplex()<<endl<<endl;
+    cout <<"C1 " <<c1<<endl;
+    cout <<"C2 " <<c2<<endl<<endl;
 
     cout << "OPERATIONS " <<endl<<endl;
-    cout <<"+ C3 " <<c3.printComplex()<<endl;
-    cout <<"- C4 " <<c2.printComplex()<<endl;
-    cout <<"* C5 " <<c3.printComplex()<<endl<<endl;
+    cout <<"+ C3 " <<c3<<endl;
+    cout <<"- C4 " <<c2<<endl;
+    cout <<"* C5 " <<c3<<endl<<endl;
 
 
 

@@ -12,13 +12,13 @@ class Complex{
         ~Complex();
         double getReal();
         double getImaginary();
-        std::string printComplex();
         Complex add(Complex n);
         Complex sub(Complex n);
         Complex mul(Complex n);
         Complex operator+(Complex n);
         Complex operator-(Complex n);
         Complex operator*(Complex n);
+        friend std::ostream &operator<<(std::ostream &os, Complex &n);
 };
 
 #endif
