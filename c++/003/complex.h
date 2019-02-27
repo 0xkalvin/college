@@ -6,13 +6,13 @@ class Complex{
     private:
         double real;
         double imaginary;
-        double getValue();
 
     public:
         Complex(double real, double imaginary);
         ~Complex();
         double getReal();
         double getImaginary();
+        std::string printComplex();
         Complex add(Complex n);
         Complex sub(Complex n);
         Complex mul(Complex n);

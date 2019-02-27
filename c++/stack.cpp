@@ -14,7 +14,8 @@ class Stack{
         void push(int x); 
         void pop(); 
         bool isEmpty();
-        void printStack(); 
+        void printStack();
+        int getTop(); 
 };
 
 
@@ -41,6 +42,10 @@ void Stack::pop(){
 bool Stack::isEmpty() 
 { 
     return (top < 0); 
+}
+
+int Stack::getTop(){
+    return a[top];
 }
 
 void Stack::printStack(){

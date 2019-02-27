@@ -3,6 +3,7 @@
 #include "integer.h"
 #include "natural.h"
 #include "rational.h"
+#include "complex.h"
 
 using namespace std;
 
@@ -52,7 +53,24 @@ int main()
     cout <<"\n\nRATIONAL SUM "<<r1.print() <<endl;
     cout <<"\n\nRATIONAL SUB "<<r2.print() <<endl;
     cout <<"\n\nRATIONAL MULT "<<r3.print() <<endl;
-    cout <<"\n\nRATIONAL DIV "<<r4.print() <<endl;
+    cout <<"\n\nRATIONAL DIV "<<r4.print() <<endl<<endl;
+
+    cout <<"COMPLEX"<<endl<<endl;
+    Complex c1(1,2);
+    Complex c2(1,-3);
+
+    Complex c3 = c1 + c2;
+    Complex c4 = c1 + c2;
+    Complex c5 = c1 + c2;
+
+    cout <<"C1 " <<c1.printComplex()<<endl;
+    cout <<"C2 " <<c2.printComplex()<<endl<<endl;
+
+    cout << "OPERATIONS " <<endl<<endl;
+    cout <<"+ C3 " <<c3.printComplex()<<endl;
+    cout <<"- C4 " <<c2.printComplex()<<endl;
+    cout <<"* C5 " <<c3.printComplex()<<endl<<endl;
+
 
 
     return 0;
