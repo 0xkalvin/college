@@ -1,13 +1,13 @@
 clear
 
-cd 003
+cd 004
 
 
 file="main.cpp"
 
 
 
-g++ ${file} complex.cpp natural.cpp integer.cpp rational.cpp
+g++ ${file} complex.cpp 
 
 
 ./a.out

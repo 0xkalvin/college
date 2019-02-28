@@ -42,7 +42,7 @@ Complex Complex::operator-(Complex n){
 Complex Complex::operator*(Complex n){
     // ( a + bi ) * ( c + di ) = ( ac - bd ) + ( ad + bc ) i
     double realPart = (real * n.getReal()) - (imaginary * n.getImaginary());
-    double imaginaryPart = (real + n.getImaginary()) + (imaginary + n.getReal());
+    double imaginaryPart = (real * n.getImaginary()) + (imaginary * n.getReal());
     Complex m(realPart, imaginaryPart);
     return m;
 }
@@ -51,6 +51,7 @@ Complex Complex::operator*(Complex n){
 Complex Complex::operator/(Complex n){
     // a: real; b: imaginary; c: n.getReal(); d: n.getImaginary()
     // ( a + bi ) / ( c + di ) = ((ac + bd) + i(bc - ad))/(c**2 + d**2)
+    if(n.getImaginary()==0 && n.getReal() == 0) return n;
     double denominator = (pow(n.getReal(), 2)+ pow(n.getImaginary(), 2));
     double realPart = (real*n.getReal() + imaginary*getImaginary())/denominator;
     double imaginaryPart = (imaginary*n.getReal() + real*n.getImaginary())/denominator;
