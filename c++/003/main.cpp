@@ -4,6 +4,7 @@
 #include "natural.h"
 #include "rational.h"
 #include "complex.h"
+#include <math.h>
 
 using namespace std;
 
