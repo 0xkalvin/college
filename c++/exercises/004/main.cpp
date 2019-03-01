@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
-#include "complex.h"
+#include "real.h"
 
 using namespace std;
 
@@ -23,6 +23,23 @@ int main(){
     cout << "SUB " << sub <<endl;
     cout << "MUL " << mul <<endl;
     cout << "DIV " << div <<endl<<endl;
+
+    Real r1(0);
+    Real r2(1);
+
+    Real sum1 = r1 + r2;
+    Real sub1 = r1 - r2;
+    Real mul1 = r1 * r2;
+    Real div1 = r1 / r2;
+
+    cout << "REAL NUMBERS"<<endl<<endl;
+    cout << "C1 " << r1 <<endl;
+    cout << "C2 " << r2 <<endl<<endl;
+    cout << "REAL OPERATIONS"<<endl<<endl;
+    cout << "SUM " << sum1 <<endl;
+    cout << "SUB " << sub1 <<endl;
+    cout << "MUL " << mul1 <<endl;
+    cout << "DIV " << div1 <<endl<<endl;
     
     return 0;
 }
