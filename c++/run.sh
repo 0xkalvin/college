@@ -1,13 +1,13 @@
 clear
 
-cd 004
+cd exercises/004
 
 
 file="main.cpp"
 
 
 
-g++ ${file} complex.cpp 
+g++ ${file} real.cpp complex.cpp
 
 
 ./a.out

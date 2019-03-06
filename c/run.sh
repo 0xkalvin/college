@@ -1,6 +1,8 @@
 clear
 
-file="sorting.c"
+cd exercises
+
+file="001merge.c"
 
 
 cc ${file}
