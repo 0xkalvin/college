@@ -8,10 +8,7 @@
 void printArray(int *array, int tam)
 {
     printf(" [");
-    for (int i = 0; i < tam; i++)
-    {
-        printf(" %2d", array[i]);
-    }
+    for (int i = 0; i < tam; i++)   printf(" %2d", array[i]);
     printf(" ]");
     printf("\n\n");
 }
@@ -24,7 +21,6 @@ int *intercala(int vetor1[], int vetor2[], int tam1, int tam2)
     // CRIA VETOR AUXILIAR
     int *vetorAux = malloc(tam * sizeof(int));
     for (int i = 0; i < tam; i++)   vetorAux[i] = i < tam1 ? vetor1[i] : vetor2[i - tam1];
-
 
     // VETOR RESPOSTA
     int *resultado = malloc(tam * sizeof(int));
@@ -43,7 +39,7 @@ int *intercala(int vetor1[], int vetor2[], int tam1, int tam2)
 
 int main()
 {
-    
+
     int vetor1[] = {0,10, 20, 30, 40, 50};
     int vetor2[] = {11, 21, 31, 41, 51};
 
