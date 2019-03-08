@@ -41,8 +41,11 @@ int main(){
     cout << "MUL " << mul1 <<endl;
     cout << "DIV " << div1 <<endl<<endl;
 
-    Rational rat1(1,2);
-    Rational rat2(5,1);
+    Rational rat1(1,3);
+    Rational rat2(1,3);
+    int x = rat1.getNumerator();
+    cout << x <<endl;
+
 
     Rational sum2 = rat1 + rat2;
     Rational sub2 = rat1 - rat2;

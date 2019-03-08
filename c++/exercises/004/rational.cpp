@@ -45,13 +45,15 @@ Rational Rational::operator*(Rational n){
 
 // DIVISION
 Rational Rational::operator/(Rational n){
-    int denominator = this->getDenominator() / n.getDenominator();
-    int numerator = this->getNumerator() / n.getNumerator();
+    
+    int denominator = this->getDenominator() * n.getNumerator();
+    int numerator = this->getNumerator() *  n.getDenominator();
     Rational s(numerator, denominator );
     return s;
 } 
 
 
-std::ostream &operator<<(std::ostream &os, Rational &n) { 
-    return os << to_string(n.getNumerator()) + "/" + to_string(n.getDenominator());
+std::ostream &operator<<(std::ostream &os, Rational &n) {
+    double resp =  double(n.getNumerator()) / double(n.getDenominator());
+    return os << to_string(resp);
 }
