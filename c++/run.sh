@@ -7,7 +7,7 @@ file="main.cpp"
 
 
 
-g++ ${file} real.cpp complex.cpp
+g++ ${file} real.cpp complex.cpp rational.cpp
 
 
 ./a.out
