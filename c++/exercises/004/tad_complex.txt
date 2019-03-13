@@ -1,0 +1,9 @@
+SPEC COMPLEX
+    SORTS COMPLEX 
+    OPERATIONS: create:                            -> COMPLEX
+                            add: COMPLEX COMPLEX   -> COMPLEX
+                            sub: COMPLEX COMPLEX   -> COMPLEX
+                            mul: COMPLEX COMPLEX   -> COMPLEX
+                            div: COMPLEX COMPLEX   -> COMPLEX
+    AXIOMS:         a + 0 = a
+END SPEC
