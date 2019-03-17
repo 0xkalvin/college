@@ -9,7 +9,6 @@ int main(){
     
     Complex c1(1,-3);
     Complex c2(0,0);
-
     Complex sum = c1 + c2;
     Complex sub = c1 - c2;
     Complex mul = c1 * c2;
@@ -24,29 +23,9 @@ int main(){
     cout << "MUL " << mul <<endl;
     cout << "DIV " << div <<endl<<endl;
 
-    Real r1(0);
-    Real r2(1);
 
-    Real sum1 = r1 + r2;
-    Real sub1 = r1 - r2;
-    Real mul1 = r1 * r2;
-    Real div1 = r1 / r2;
-
-    cout << "REAL NUMBERS"<<endl<<endl;
-    cout << "R1 " << r1 <<endl;
-    cout << "R2 " << r2 <<endl<<endl;
-    cout << "REAL OPERATIONS"<<endl<<endl;
-    cout << "SUM " << sum1 <<endl;
-    cout << "SUB " << sub1 <<endl;
-    cout << "MUL " << mul1 <<endl;
-    cout << "DIV " << div1 <<endl<<endl;
-
-    Rational rat1(1,3);
-    Rational rat2(1,3);
-    int x = rat1.getNumerator();
-    cout << x <<endl;
-
-
+    Rational rat1(1,2);
+    Rational rat2(1,2);
     Rational sum2 = rat1 + rat2;
     Rational sub2 = rat1 - rat2;
     Rational mul2 = rat1 * rat2;

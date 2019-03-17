@@ -6,54 +6,10 @@
 using namespace std;
 
 
-Rational::Rational(int n, int d): Real(n/d){
-    this->numerator = n;
-    this->denominator = d;
-}       
+Rational::Rational(int n, int d): Complex(n/(double)d,0){}       
         
 Rational::~Rational(){}
 
-int Rational::getNumerator(){
-    return numerator;
-}
-
-int Rational::getDenominator(){
-    return denominator;
-}
-// SUM
-Rational Rational::operator+(Rational n){
-    int denominator = this->getDenominator() * n.getDenominator();
-    int numerator = (this->getNumerator() * n.getDenominator()) + (n.getNumerator() * this->getDenominator());
-    Rational s(numerator, denominator );
-    return s;
-}   
-
-// SUBTRACTION
-Rational Rational::operator-(Rational n){
-    int denominator = this->getDenominator() * n.getDenominator();
-    int numerator = (this->getNumerator() * n.getDenominator()) - (n.getNumerator() * this->getDenominator());
-    Rational s(numerator, denominator );
-    return s;
-} 
-// MULTIPLICATION
-Rational Rational::operator*(Rational n){
-    int denominator = this->getDenominator() * n.getDenominator();
-    int numerator = this->getNumerator() * n.getNumerator();
-    Rational m(numerator, denominator );
-    return m;
-} 
-
-// DIVISION
-Rational Rational::operator/(Rational n){
-    
-    int denominator = this->getDenominator() * n.getNumerator();
-    int numerator = this->getNumerator() *  n.getDenominator();
-    Rational s(numerator, denominator );
-    return s;
-} 
-
-
 std::ostream &operator<<(std::ostream &os, Rational &n) {
-    double resp =  double(n.getNumerator()) / double(n.getDenominator());
-    return os << to_string(resp);
+    return os << n.getReal();
 }
