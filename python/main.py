@@ -45,3 +45,17 @@ def bubble_sort(list):
     return list
 
 
+def sum_digits(string):
+    return sum([int(n) for n in string])
+
+def fib(n):
+    a = 0
+    b = 1
+    current = 0
+    arr = [a,b]
+    for i in range(n-2):
+        current = a + b
+        a = b
+        b = current
+        arr.append(current)
+    return current, arr
