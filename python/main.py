@@ -45,6 +45,3 @@ def bubble_sort(list):
     return list
 
 
-
-lista = [9,1,54,2,2,5]
-print(bubble_sort(lista))
