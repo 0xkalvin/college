@@ -1,5 +1,5 @@
 #ifndef TRIANGLE_H
-#define TRIAGLE_H
+#define TRIANGLE_H
 
 class Triangle{
 
@@ -13,6 +13,8 @@ class Triangle{
         double operator+(Triangle n);
         bool operator==(Triangle n);
         bool operator>(Triangle n);
+        double getPerimeter();
+        double getArea();
 
 };
 
