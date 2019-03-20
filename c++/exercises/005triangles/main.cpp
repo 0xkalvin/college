@@ -18,6 +18,14 @@ int main(){
     cout <<"t2 area " << t2.getArea() <<endl;
     cout <<"is t2 valid " << boolalpha<< t2.isValid() <<endl;
     
+    bool eq = t2 == t1;
+    cout <<"is equal " << boolalpha << eq <<endl;
+
+    bool gt = t2 > t1;
+    cout <<"is greater than " << boolalpha << gt <<endl;
+
+
+
     cout << area_total <<endl;
 
 

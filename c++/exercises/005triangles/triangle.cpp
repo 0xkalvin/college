@@ -29,3 +29,15 @@ double Triangle::operator+(Triangle n){
     double area2 = n.getArea();
     return area1 + area2;
 }
+
+bool Triangle::operator==(Triangle n){
+    double area1 = this->getArea();
+    double area2 = n.getArea();
+    return area1 == area2;
+}
+
+bool Triangle::operator>(Triangle n){
+    double area1 = this->getArea();
+    double area2 = n.getArea();
+    return area1 > area2;
+}
