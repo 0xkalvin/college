@@ -8,6 +8,7 @@ class Triangle{
     
     public:
         Triangle(double a, double b, double c);
+        Triangle();
         ~Triangle();
         bool isValid();
         double operator+(Triangle n);
@@ -15,6 +16,8 @@ class Triangle{
         bool operator>(Triangle n);
         double getPerimeter();
         double getArea();
+        static int numOfTriangles;
+        int getNumOfTriangles();
 
 };
 
