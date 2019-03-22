@@ -2,7 +2,7 @@ clear
 
 cd exercises
 
-file="001merge.c"
+file="languageEP.c"
 
 
 cc ${file}
