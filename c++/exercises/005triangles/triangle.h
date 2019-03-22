@@ -18,7 +18,6 @@ class Triangle{
         double getArea();
         static int numOfTriangles;
         int getNumOfTriangles();
-
 };
 
 

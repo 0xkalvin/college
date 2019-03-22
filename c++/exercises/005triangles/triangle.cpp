@@ -24,31 +24,29 @@ double Triangle::getPerimeter(){
 
 double Triangle::getArea(){
     double p1_half = this->getPerimeter()/2;
-    return pow(p1_half*(p1_half - this->a)*(p1_half - this->b)*(p1_half - this->c),0.5);
+    return pow(p1_half*(p1_half - double(this->a))*(p1_half - double(this->b))*(p1_half - double(this->c)),0.5);
 }
 
 double Triangle::operator+(Triangle n){
-    if(this->isValid() && n.isValid()){
         double area1 = this->getArea();
         double area2 = n.getArea();
         return area1 + area2;
-    } 
+
 }
 
 bool Triangle::operator==(Triangle n){
-    if(this->isValid() && n.isValid()){
+
         double area1 = this->getArea();
         double area2 = n.getArea();
         return area1 == area2;
-    } 
+    
 }
 
 bool Triangle::operator>(Triangle n){
-    if(this->isValid() && n.isValid()){
+
         double area1 = this->getArea();
         double area2 = n.getArea();
-        return area1 > area2;
-    } 
+        return area1 > area2; 
 }
 
 

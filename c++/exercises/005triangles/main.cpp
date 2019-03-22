@@ -4,68 +4,67 @@
 
 using namespace std;
 
-void triangle_operations(){
-   
-    Triangle t1(1,2,3);
-    Triangle t2(3,4,5);
+void print_triangle_array(Triangle arr[], int size)
+{
 
-    double area_total = t1 + t2;
-
-    cout <<"t1 area " <<t1.getArea() <<endl;
-    cout <<"is t1 valid " << boolalpha << t1.isValid() <<endl<<endl;
-    cout <<"t2 area " << t2.getArea() <<endl;
-    cout <<"is t2 valid " << boolalpha<< t2.isValid() <<endl<<endl;
-    
-    bool eq = t2 == t1;
-    cout <<"is equal " << boolalpha << eq <<endl;
-
-    bool gt = t2 > t1;
-    cout <<"is greater than " << boolalpha << gt <<endl;
-
-    cout <<"t1 area `"<<t1.getArea() << "` + t2 area `" <<t2.getArea()<<"` is "<<area_total <<endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i].getArea() << endl;
+    }
 }
 
-void triangle_array(Triangle arr[]){
-    
-    for(int i = 0; i < 3; i++){
-        int a, b, c;
-        cout <<"Enter the 3 sides of the "<< i <<" triangle" <<endl;
-        cin >> a;
-        cin >> b;
-        cin >> c;
-        arr[i] = Triangle(a,b,c);
+Triangle *initialize_triangle_array()
+{
+    int a = 0;
+    int b = 0;
+    int c = 0;
+
+    Triangle *triangles = (Triangle *)malloc(10 * sizeof(Triangle));
+
+    for (int i = 0; i < 10; i++)
+    {
+        triangles[i] = *(new Triangle(a, b, c));
     }
 
-    for(int i = 0; i < 3; i++){
-        cout << "The area of the triangle at position " << i << " is "<< arr[i].getArea() <<endl;
-    }
-
-    cout <<"The number of existing triangles is " <<arr[0].getNumOfTriangles()<<endl;
-
+    return triangles;
 }
 
-void total_area_array(Triangle arr[]){
+void update_triangle_array(Triangle arr[], int a, int b, int c, int index)
+{
+    if (index >= 0 && index < 10)
+    {
+        arr[index] = Triangle(a, b, c);
+        cout << "The triangle " << index << " was updated sucessfully" << endl;
+        cout << "its area is " << arr[index].getArea() << " and is perimeter is " << arr[index].getPerimeter() << endl;
+    }
+    else
+        cout << "Out of range! Enter a valid index. " << endl;
+}
 
-    int total_area = 0;
-    for(int i = 0; i < 3; i++){
+void total_area_array(Triangle arr[], int size)
+{
+
+    double total_area = 0;
+    for (int i = 0; i < size; i++)
+    {
         total_area += arr[i].getArea();
     }
 
     cout << "the total area of this array of triangles is " << total_area << endl;
 }
 
+int main()
+{
 
-int main(){
-
-
-    Triangle arr[3];
+    int size = 10;
+    Triangle *arr = initialize_triangle_array();
 
     while (true)
     {
         cout << "\n";
         cout << "------ TRIANGLES AND STUFF  --------\n";
         cout << "\n         0 - exit.";
-        cout << "\n         1 - next triangle info.";
+        cout << "\n         1 - update a triangle.";
         cout << "\n         2 - total area\n";
 
         int choice;
@@ -77,14 +76,22 @@ int main(){
         }
         else if (choice == 1)
         {
-            triangle_array(arr);
-        
+
+            int a, b, c;
+            int index;
+            cout << "Enter the index of the triangle which you're going to update (0 - 9): " << endl;
+            cin >> index;
+            cout << "Enter the 3 sides of the triangle" << endl;
+            cin >> a;
+            cin >> b;
+            cin >> c;
+            update_triangle_array(arr, a, b, c, index);
         }
-        else if (choice == 2){
-            total_area_array(arr);
+        else if (choice == 2)
+        {
+            total_area_array(arr, size);
         }
     }
-
 
     return 0;
 }
