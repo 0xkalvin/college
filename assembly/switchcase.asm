@@ -36,17 +36,16 @@ Else:   sub $s0, $s1, $s2
 L2:	j WHILE
 
 WHILE:	beq $s0, $s4, EXIT
-	addi $s0, $s0, 1
-	j WHILE
+		addi $s0, $s0, 1
+		j WHILE
 j EXIT
 	
 
 # do/while
 L3:	j DOWHILE
 
-DOWHILE:
-	addi $s0, $s4, 10
-	beq $s0, $s4, EXIT
-	j DOWHILE
+DOWHILE:	addi $s0, $s4, 10
+			beq $s0, $s4, EXIT
+			j DOWHILE
 
 EXIT:
