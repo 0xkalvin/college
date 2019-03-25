@@ -16,6 +16,9 @@ else                    add $s2, $s0, $s1
 
 
 c = 0           --->    # i = $s0; c = $s1
-for(i = 0; i < 10; i++) beq $s0, 10, done
-    c++;                add $s1, $s1, 1
+for(i = 0; i < 10; i++) for: beq $s0, 10, done
+    c++;                     add $s1, $s1, 1
+                             add $s0, $s0, 1
+                             j for
+                        done: la $s2, $s1
 
