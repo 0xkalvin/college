@@ -82,9 +82,18 @@ int *inserctionSort(int array[], int size){
     return array;
 }
 
-int *mergeSort(int array[], int size){
+void merge(int array, int start, int mid, int end){
+
+}
+
+void mergeSort(int array[], int start, int end){
     
-    return array;
+    if(start < end){
+        int mid = (start+end)/2;
+        mergeSort(array, start, mid);
+        mergeSort(array, mid+1, end);
+        merge(array, start, mid, end);
+    }
 }
 void menuAnalysis()
 {
@@ -167,6 +176,22 @@ void menuAnalysis()
 
             double result = speedTest(start, end);
             printf("\n INSERCTION SORT: THE TIME TAKEN WAS %f SECONDS \n\n", result);
+        }
+        else if(choice == 4)
+        {
+            int size;
+            printf("\n\nInsert the size of the array\n");
+            scanf("%d",&size);
+            system("clear");
+            int *array = createArray(size);
+
+            printf(" DESORDED ARRAY: \n");
+            printArray(array, size);
+
+            mergeSort(array, 0,10);
+
+            printf(" SORTED ARRAY: \n");
+            printArray(array, size);
         }
     };
 }

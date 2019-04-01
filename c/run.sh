@@ -2,7 +2,7 @@ clear
 
 cd exercises
 
-file="languageEP.c"
+file="p1.c"
 
 
 cc ${file}
