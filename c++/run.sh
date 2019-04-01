@@ -1,13 +1,13 @@
 clear
 
-cd exercises/005triangles
+#cd exercises/005triangles
 
 
 file="main.cpp"
 
 
 
-g++ ${file} triangle.cpp
+g++ ${file} 
 
 
 ./a.out
