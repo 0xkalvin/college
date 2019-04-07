@@ -1,9 +1,9 @@
 clear
 
-#cd exercises/005triangles
+cd topics
 
 
-file="main.cpp"
+file="templates.cpp"
 
 
 
