@@ -1,4 +1,4 @@
-
+import random
 
 # SORT ALGORITHM
 def selection_sort(l):
@@ -43,7 +43,7 @@ def bubble_sort(list):
                 list[j] = list[j+1]
                 list[j+1] = temp
     return list
-
+# =====================================================
 
 def sum_digits(string):
     return sum([int(n) for n in string])
@@ -64,4 +64,8 @@ def fib(n):
 def palindrome(string):
     return True if string == string[::-1] else False
 
-print(palindrome("test"))
+def create_list(n):
+    return [random.randint(0,100) for i in range(n)]
+
+def create_matrix(line,column):
+    return [[random.randint(0,100) for i in range(column)] for j in range(line)]
