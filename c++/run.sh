@@ -2,12 +2,8 @@ clear
 
 cd topics
 
+file="test.cpp"
 
-file="templates.cpp"
-
-
-
-g++ ${file} 
-
+g++ ${file} array.cpp
 
 ./a.out
