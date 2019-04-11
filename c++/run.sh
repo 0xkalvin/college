@@ -2,7 +2,7 @@ clear
 
 cd topics
 
-file="test.cpp"
+file="main.cpp"
 
 g++ ${file} array.cpp
 

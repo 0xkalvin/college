@@ -1,5 +1,24 @@
-# include<iostream>
-#include "array.h"
+#include <iostream>
+#ifndef ARRAY_H
+#define ARRAY_H
+
+using namespace std;
+
+template <typename T>
+class Array{
+
+    private:
+        T* v;
+        int size;
+    
+    public:
+        Array(int s);
+        ~Array();
+        int getSize();
+        T getElement(int index);
+        bool search(T element);
+        void append(T element, int index);
+};
 
 template <typename T>
 Array<T>::Array(int s){
@@ -44,3 +63,5 @@ void Array<T>::append(T element, int index){
     }
     this->v[index] = element;
 }
+
+#endif
