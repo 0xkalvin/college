@@ -1,6 +1,6 @@
 clear
 
-cd topics
+cd exercises/006array
 
 file="main.cpp"
 
