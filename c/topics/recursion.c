@@ -45,6 +45,12 @@ int powerOf(int x, int y){
     else return x*powerOf(x, y-1);
 }
 
+int mdc(int a, int b){
+    if(b == 0) return a;
+    else return mdc(b, a % b);
+}
+
+
 
 int main(){
 
@@ -53,7 +59,10 @@ int main(){
 
     int array[] = {1,2,3};
 
-    printf(" %d ", arraySoma(array, 3));
+    printf(" %d \n", arraySoma(array, 3));
+
+    printf("mdc  %d \n", mdc(60,50));
+
 
 
     return 0;
