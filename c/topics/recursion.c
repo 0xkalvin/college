@@ -39,7 +39,6 @@ int binarySearch(int array[], int n, int start, int end){
     }
 }
 
-
 int powerOf(int x, int y){
     if(y == 0) return 1;
     else return x*powerOf(x, y-1);
@@ -51,6 +50,15 @@ int mdc(int a, int b){
 }
 
 
+void decimalToBinary(int n){
+    if(n == 0) return;
+    else{
+        decimalToBinary(n/2);
+        printf(" %d", n % 2);
+    }
+}
+
+
 
 int main(){
 
@@ -59,10 +67,10 @@ int main(){
 
     int array[] = {1,2,3};
 
-    printf(" %d \n", arraySoma(array, 3));
+    
 
     printf("mdc  %d \n", mdc(60,50));
-
+    decimalToBinary(32);
 
 
     return 0;
