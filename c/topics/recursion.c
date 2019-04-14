@@ -58,20 +58,36 @@ void decimalToBinary(int n){
     }
 }
 
+// void invertArray(int array[], int start, int end){
+//     if(start = end ) return;
+//     else{
+//         int temp = array[end];
+//         array[end] = array[end - start];
+//         array[start] = temp;
+//         return invertArray(array,start+1, end-1);
+//     }
+// }
+
+int combination(int n, int p){
+    return fatorial(n)/(fatorial(p)*fatorial(n-p));
+}
+
+void pascalTriangle(int n){
+    for(int i = 0; i <= n; i++){
+        for(int j = 0; j <= i; j++){
+            int c = combination(i, j);
+            printf(" %d ", c);
+        }
+        printf("\n");
+    }
+}
 
 
 int main(){
 
-    printf(" %d", somaIntervalo(0,4));
-    printf(" %d \n", fatorial(4));
+    int array[] = {1,2,3,4,5,6};
 
-    int array[] = {1,2,3};
-
-    
-
-    printf("mdc  %d \n", mdc(60,50));
-    decimalToBinary(32);
-
+    pascalTriangle(10);
 
     return 0;
 }
