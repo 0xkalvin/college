@@ -68,6 +68,10 @@ void decimalToBinary(int n){
 //     }
 // }
 
+int arrangement(int n, int p){
+    return fatorial(n)/fatorial(n-p);
+}
+
 int combination(int n, int p){
     return fatorial(n)/(fatorial(p)*fatorial(n-p));
 }
@@ -76,7 +80,7 @@ void pascalTriangle(int n){
     for(int i = 0; i <= n; i++){
         for(int j = 0; j <= i; j++){
             int c = combination(i, j);
-            printf(" %d ", c);
+            printf(" %3d ", c);
         }
         printf("\n");
     }
