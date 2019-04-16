@@ -13,10 +13,6 @@ int main()
     v1.insert(40, 3);
     v1.insert(50, 4);
 
-    for(int i = 0; i < v1.getSize(); i++){
-        cout << v1.getElement(i) <<endl;
-    }
-
     v1.print();
     
 

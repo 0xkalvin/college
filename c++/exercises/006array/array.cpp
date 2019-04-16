@@ -89,6 +89,7 @@ bool Array<T>::search(T elem){
 
 template <typename T>
 Array<T> Array<T>::operator+(Array<T> ve){
+    
 
 }
 
