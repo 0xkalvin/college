@@ -15,7 +15,7 @@ public:
     bool search(T elem);
     void insert(T elem, int i);
     void remove(int i);
-    Array<T> operator+(Array arr);
+    Array<T> concat(Array& arr);
     void print();
 };
 
@@ -88,14 +88,17 @@ bool Array<T>::search(T elem){
 }
 
 template <typename T>
-Array<T> Array<T>::operator+(Array<T> arr){
+Array<T> Array<T>::concat(Array<T>& arr){
     Array<T> resp(this->size + arr.getSize());
-
+    
     for(int i = 0; i < this->size; i++){
         resp.insert(this->v[i], i);
     }
+    int j = 0;
     for(int i = this->size; i < this->size + arr.getSize(); i++){
-        resp.insert(arr[i], i);
+        resp.insert(arr.getElement(j), i);
+        j++;
+        
     }
     return resp;
 }
