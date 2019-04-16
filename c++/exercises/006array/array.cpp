@@ -16,7 +16,7 @@ public:
     void insert(T elem, int i);
     void remove(int i);
     Array<T> operator+(Array arr);
-    //friend std::ostream &operator<<(std::ostream &os, Array &n);
+    void print();
 };
 
 
@@ -92,15 +92,13 @@ Array<T> Array<T>::operator+(Array<T> ve){
 
 }
 
-
-
-// template <typename T>
-// std::ostream &operator<<(std::ostream &os, Array<T> &n) { 
-//     os << "[ ";
-//     for(int i = 0; i < n.getSize(); i++){
-//         os <<n[i]<<" ";
-//     }
-//     os << "]";
-// }
+template <typename T>
+void Array<T>::print(){
+    std::cout << "[";
+    for(int i = 0; i < this->size; i++){
+        std::cout <<" "<<v[i];
+    }
+    std::cout << "]" <<std::endl;
+}
 
 #endif
