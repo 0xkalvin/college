@@ -88,16 +88,23 @@ bool Array<T>::search(T elem){
 }
 
 template <typename T>
-Array<T> Array<T>::operator+(Array<T> ve){
-    
+Array<T> Array<T>::operator+(Array<T> arr){
+    Array<T> resp(this->size + arr.getSize());
 
+    for(int i = 0; i < this->size; i++){
+        resp.insert(this->v[i], i);
+    }
+    for(int i = this->size; i < this->size + arr.getSize(); i++){
+        resp.insert(arr[i], i);
+    }
+    return resp;
 }
 
 template <typename T>
 void Array<T>::print(){
     std::cout << "[";
     for(int i = 0; i < this->size; i++){
-        std::cout <<" "<<v[i];
+        std::cout <<" "<<this->v[i];
     }
     std::cout << "]" <<std::endl;
 }
