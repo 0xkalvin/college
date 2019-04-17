@@ -36,5 +36,5 @@ Real Real::operator/(Real n){
 
 
 std::ostream &operator<<(std::ostream &os, Real &n) { 
-    return os << to_string(n.getReal());
+    return os << n.getReal();
 }
