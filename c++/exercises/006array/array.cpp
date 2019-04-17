@@ -23,7 +23,7 @@ public:
 template <typename T>
 Array<T>::Array(int s){
     try{
-        this->v = new T[10];
+        this->v = (T*)malloc(s*sizeof(T));
         if(v == NULL) throw new std::string("Memory allocation failed! ");
         this->size = s;
     }
@@ -105,11 +105,12 @@ Array<T> Array<T>::concat(Array<T>& arr){
 
 template <typename T>
 void Array<T>::print(){
-    std::cout << "[";
+    std::cout << "[ ";
     for(int i = 0; i < this->size; i++){
-        std::cout <<" "<<this->v[i];
+        if(i != this->size - 1) std::cout <<this->v[i]<<", ";
+        else std::cout <<this->v[i];
     }
-    std::cout << "]" <<std::endl;
+    std::cout << " ]" <<std::endl<<std::endl;
 }
 
 #endif
