@@ -1,24 +1,4 @@
-#include <iostream>
-#ifndef ARRAY_H
-#define ARRAY_H
-
-template <typename T>
-class Array {
-private:
-    T *v;
-    int size;
-public:
-    Array(int s);
-    ~Array();
-    int getSize();
-    T getElement(int index);
-    bool search(T elem);
-    void insert(T elem, int i);
-    void remove(int i);
-    Array<T> concat(Array& arr);
-    void print();
-};
-
+#include "array.h"
 
 template <typename T>
 Array<T>::Array(int s){
@@ -113,4 +93,15 @@ void Array<T>::print(){
     std::cout << " ]" <<std::endl<<std::endl;
 }
 
-#endif
+
+// template <typename T>
+// void Array<T>::&operator[](T elem, int index){
+//     try{
+//         if(index < 0 || index >= this->size) throw new std::string("Out of range!");
+//         v[index] = elem;
+//     }
+//     catch (std::string e){
+//         std::cout << "Error: " << e <<std::endl;
+//     }
+// }
+
