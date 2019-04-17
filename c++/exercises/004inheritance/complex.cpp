@@ -61,7 +61,7 @@ Complex Complex::operator/(Complex n){
 
 
 std::ostream &operator<<(std::ostream &os, Complex &n) { 
-    if(n.getImaginary() > 0) return os << to_string(n.getReal()) + "+" + to_string(n.getImaginary()) + "i";
-    else if(n.getImaginary() < 0) return os << to_string(n.getReal()) + to_string(n.getImaginary()) + "i";
-    else return os << to_string(n.getReal());
+    if(n.getImaginary() > 0) return os <<n.getReal() << "+" << n.getImaginary() << "i";
+    else if(n.getImaginary() < 0) return os <<n.getReal()  << n.getImaginary() << "i";
+    else if (n.getImaginary() == 0) return os << n.getReal();
 }
