@@ -45,3 +45,8 @@ Natural Natural::operator*(Natural n){
     Natural m(value * n.getValue());
     return m;
 }
+
+
+std::ostream &operator<<(std::ostream &os, Natural &n) { 
+    return os << n.getValue();
+}

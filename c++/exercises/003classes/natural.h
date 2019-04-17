@@ -16,6 +16,7 @@ class Natural{
         Natural mul(Natural n);
         Natural operator+(Natural n);
         Natural operator*(Natural n);
+        friend std::ostream &operator<<(std::ostream &os, Natural &n);
 
 };
 

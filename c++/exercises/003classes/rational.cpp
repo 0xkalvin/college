@@ -59,3 +59,6 @@ Rational Rational::operator/(Rational n){
     return m;
 }
 
+std::ostream &operator<<(std::ostream &os, Rational &n) { 
+    return os << n.getValue();
+}

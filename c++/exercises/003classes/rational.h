@@ -19,6 +19,7 @@ class Rational{
         Rational operator-(Rational n);
         Rational operator*(Rational n);
         Rational operator/(Rational n);
+        friend std::ostream &operator<<(std::ostream &os, Rational &n);
 
 };
 

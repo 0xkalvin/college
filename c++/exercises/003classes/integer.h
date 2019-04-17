@@ -17,6 +17,7 @@ class Integer{
         Integer mul(Integer n);
         Integer operator+(Integer n);
         Integer operator*(Integer n);
+        friend std::ostream &operator<<(std::ostream &os, Integer &n);
 
 
 };

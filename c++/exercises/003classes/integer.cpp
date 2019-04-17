@@ -39,3 +39,7 @@ Integer Integer::operator+(Integer n){
     Integer sum(value + n.getValue());
     return sum;
 }
+
+std::ostream &operator<<(std::ostream &os, Integer &n) { 
+    return os << n.getValue();
+}
