@@ -6,31 +6,7 @@
 
 using namespace std;
 
-
-int main()
-{
-    Array<int> v1(5);
-    Array<int> v2(3);
-
-    v1.insert(10, 0);
-    v1.insert(20, 1);
-    v1.insert(30, 2);
-    v1.insert(40, 3);
-    v1.insert(50, 4);
- 
-    v2.insert(111, 0);
-    v2.insert(222, 1);
-    v2.insert(333, 2);
-
-    cout << "Array 1"<<endl;
-    v1.print();
-    cout << "Array 2"<<endl;
-    v2.print();
-    cout << "Concat array 1 and array 2"<<endl;
-    v1.concat(v2).print();
-
-
-
+void array_of_previous_classes(){
 
     // NATURAIS
     Array<Natural> naturalArray(2);
@@ -76,6 +52,35 @@ int main()
     complexArray.insert(c2, 1);
     cout << "Complex Array"<<endl;
     complexArray.print();
+
+}
+
+
+int main()
+{
+    Array<int> v1(5);
+    Array<int> v2(3);
+
+    v1.insert(10, 0);
+    v1.insert(20, 1);
+    v1.insert(30, 2);
+    v1.insert(40, 3);
+    v1.insert(50, 4);
+ 
+    v2.insert(111, 0);
+    v2.insert(222, 1);
+    v2.insert(333, 2);
+
+    
+
+    cout << "Array 1"<<endl;
+    v1.print();
+    cout << "Array 2"<<endl;
+    v2.print();
+    cout <<"v2[0] array " <<v2[0] <<endl;
+    cout << "Concat array 1 and array 2"<<endl;
+    v1.concat(v2).print();
+
 
 
 

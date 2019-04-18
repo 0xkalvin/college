@@ -11,7 +11,7 @@ LinkedList<T>::~LinkedList(){
 }
 
 template <typename T>
-bool LinkedList<T>::isEmpty(){
+bool LinkedList<T>::isEmpty() const{
     return this->head == NULL;
 }
 

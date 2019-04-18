@@ -13,11 +13,11 @@ public:
     int getSize();
     T getElement(int index);
     bool search(T elem);
-    void insert(T elem, int i);
+    void insert(T elem, int index);
     void remove(int i);
     Array<T> concat(Array& arr);
     void print();
-    //void &operator[](T &elem, int i);
+    T operator[](int index);
 };
 
 #endif

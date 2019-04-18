@@ -5,7 +5,7 @@ Array<T>::Array(int s){
     try{
         this->v = (T*)malloc(s*sizeof(T));
         if(v == NULL) throw new std::string("Memory allocation failed! ");
-        this->size = s;
+        else this->size = s;
     }
     catch (std::string e){
         std::cout << "Error: " << e <<std::endl;
@@ -94,14 +94,13 @@ void Array<T>::print(){
 }
 
 
-// template <typename T>
-// void Array<T>::&operator[](T elem, int index){
-//     try{
-//         if(index < 0 || index >= this->size) throw new std::string("Out of range!");
-//         v[index] = elem;
-//     }
-//     catch (std::string e){
-//         std::cout << "Error: " << e <<std::endl;
-//     }
-// }
-
+template <typename T>
+T Array<T>::operator[](int index){
+    try{
+        if(index < 0 || index >= this->size) throw new std::string("Out of range!");
+        else return this->v[index];
+    }
+    catch (std::string e){
+        std::cout << "Error: " << e <<std::endl;
+    }
+}

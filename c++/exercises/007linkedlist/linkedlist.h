@@ -10,7 +10,7 @@ class LinkedList{
     public:
         LinkedList();
         ~LinkedList();
-        bool isEmpty();
+        bool isEmpty() const;
         void removeFirst();
 
 
