@@ -95,7 +95,7 @@ void Array<T>::print(){
 
 
 template <typename T>
-T Array<T>::operator[](int index){
+T &Array<T>::operator[](int index){
     try{
         if(index < 0 || index >= this->size) throw new std::string("Out of range!");
         else return this->v[index];

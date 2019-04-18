@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void array_of_previous_classes(){
+void exercise1(){
 
     // NATURAIS
     Array<Natural> naturalArray(2);
@@ -56,32 +56,36 @@ void array_of_previous_classes(){
 }
 
 
-int main()
-{
+void exercise2(){
     Array<int> v1(5);
     Array<int> v2(3);
 
-    v1.insert(10, 0);
-    v1.insert(20, 1);
-    v1.insert(30, 2);
-    v1.insert(40, 3);
-    v1.insert(50, 4);
- 
-    v2.insert(111, 0);
-    v2.insert(222, 1);
-    v2.insert(333, 2);
+    v1[0] = 10;
+    v1[1] = 20;
+    v1[2] = 30;
+    v1[3] = 40;
+    v1[4] = 50;
 
-    
+    v2[0] = 111;
+    v2[1] = 222;
+    v2[2] = 333;
 
     cout << "Array 1"<<endl;
     v1.print();
     cout << "Array 2"<<endl;
     v2.print();
-    cout <<"v2[0] array " <<v2[0] <<endl;
     cout << "Concat array 1 and array 2"<<endl;
     v1.concat(v2).print();
 
+}
 
+
+int main()
+{
+ 
+    exercise1();
+
+    exercise2();
 
 
     return 0;

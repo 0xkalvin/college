@@ -17,7 +17,7 @@ public:
     void remove(int i);
     Array<T> concat(Array& arr);
     void print();
-    T operator[](int index);
+    T &operator[](int index);
 };
 
 #endif
