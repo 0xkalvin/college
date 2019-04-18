@@ -62,7 +62,7 @@ def fib(n):
 
 
 def palindrome(string):
-    return True if string == string[::-1] else False
+    return string == string[::-1]
 
 def create_list(n):
     return [random.randint(0,100) for i in range(n)]
