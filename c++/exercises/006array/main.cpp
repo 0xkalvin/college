@@ -12,8 +12,8 @@ void exercise1(){
     Array<Natural> naturalArray(2);
     Natural n1(666);
     Natural n2(1000);
-    naturalArray.insert(n1, 0);
-    naturalArray.insert(n2, 1);
+    naturalArray[0] = n1;
+    naturalArray[1] = n2;
     cout << "Natural Array"<<endl;
     naturalArray.print();
 
@@ -21,8 +21,8 @@ void exercise1(){
     Array<Integer> integerArray(2);
     Integer i1(-22);
     Integer i2(123);
-    integerArray.insert(i1, 0);
-    integerArray.insert(i2, 1);
+    integerArray[0] = i1;
+    integerArray[1] = i2;
     cout << "Integer Array"<<endl;
     integerArray.print();
 
@@ -30,8 +30,8 @@ void exercise1(){
     Array<Rational> rationalArray(2);
     Rational rat1(-2,5);
     Rational rat2(1,3);
-    rationalArray.insert(rat1, 0);
-    rationalArray.insert(rat2, 1);
+    rationalArray[0] = rat1;
+    rationalArray[1] = rat2;
     cout << "Rational Array"<<endl;
     rationalArray.print();
 
@@ -39,8 +39,8 @@ void exercise1(){
     Array<Real> realArray(2);
     Real r1(-2.6);
     Real r2(1);
-    realArray.insert(r1, 0);
-    realArray.insert(r2, 1);
+    realArray[0] = r1;
+    realArray[0] = r2;
     cout << "Real Array"<<endl;
     realArray.print();
 
@@ -48,8 +48,8 @@ void exercise1(){
     Array<Complex> complexArray(2);
     Complex c1(-2,5);
     Complex c2(1,3);
-    complexArray.insert(c1, 0);
-    complexArray.insert(c2, 1);
+    complexArray[0] = c1;
+    complexArray[1] = c2;
     cout << "Complex Array"<<endl;
     complexArray.print();
 
