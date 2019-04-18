@@ -10,6 +10,8 @@ class LinkedList{
     public:
         LinkedList();
         ~LinkedList();
+        bool isEmpty();
+        void removeFirst();
 
 
 };
