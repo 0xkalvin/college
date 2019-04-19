@@ -48,7 +48,7 @@ def bubble_sort(list):
 def sum_digits(string):
     return sum([int(n) for n in string])
 
-def fib(n):
+def fib1(n):
     a = 0
     b = 1
     current = 0
@@ -60,6 +60,8 @@ def fib(n):
         arr.append(current)
     return current, arr
 
+def fib2(n):
+    return n if n <= 1 else fib2(n-1) + fib2(n-2)
 
 def palindrome(string):
     return string == string[::-1]
@@ -69,3 +71,4 @@ def create_list(n):
 
 def create_matrix(line,column):
     return [[random.randint(0,100) for i in range(column)] for j in range(line)]
+
