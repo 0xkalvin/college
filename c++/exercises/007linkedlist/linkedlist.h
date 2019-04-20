@@ -21,4 +21,4 @@ class LinkedList{
 };
 
 
-#endif LINKED_LIST_H
+#endif 
