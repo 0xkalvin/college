@@ -12,6 +12,10 @@ class LinkedList{
         ~LinkedList();
         bool isEmpty() const;
         void removeFirst();
+        void insertLast();
+        void removeLast();
+        void invert();
+        Node<T> getLast();
 
 
 };
