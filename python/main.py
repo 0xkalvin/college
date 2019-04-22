@@ -63,6 +63,9 @@ def fib1(n):
 def fib2(n):
     return n if n <= 1 else fib2(n-1) + fib2(n-2)
 
+def fat(n):
+    return 1 if n<=1 else n*fat(n-1)
+
 def palindrome(string):
     return string == string[::-1]
 
@@ -71,4 +74,3 @@ def create_list(n):
 
 def create_matrix(line,column):
     return [[random.randint(0,100) for i in range(column)] for j in range(line)]
-
