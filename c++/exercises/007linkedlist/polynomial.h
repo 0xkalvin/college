@@ -12,6 +12,8 @@ class Polynomial : public LinkedList{
     public:
         Polynomial();
         ~Polynomial();
+        void print();
+        T resolve(int k);
 };
 
 #endif 
