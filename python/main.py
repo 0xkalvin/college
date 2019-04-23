@@ -74,3 +74,12 @@ def create_list(n):
 
 def create_matrix(line,column):
     return [[random.randint(0,100) for i in range(column)] for j in range(line)]
+
+
+def max_array(array):
+    if len(array) == 1: return array[0]
+    else:
+        max = max_array(array[1:])
+        return max if max > array[0] else array[0] 
+
+
