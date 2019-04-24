@@ -14,5 +14,5 @@ Polynomial<T>::~Polynomial(){
 
 template <typename T>
 void Polynomial<T>::print(){
-    
+
 }

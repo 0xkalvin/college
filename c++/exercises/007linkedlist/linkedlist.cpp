@@ -2,7 +2,7 @@
 
 template <typename T>
 LinkedList<T>::LinkedList(){
-    this->head = NULL;
+    this->head = new Node<T>();
 }
 
 template <typename T>
@@ -22,4 +22,9 @@ void LinkedList<T>::removeFirst(){
         this->head = this->head->next;
         delete aux;
     }
+}
+
+template <typename T>
+const T &LinkedList<T>::getFirst() const {
+    return this->head->elem;
 }

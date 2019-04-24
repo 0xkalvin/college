@@ -80,6 +80,5 @@ def max_array(array):
     if len(array) == 1: return array[0]
     else:
         max = max_array(array[1:])
-        return max if max > array[0] else array[0] 
-
+        return max if max > array[0] else array[0]
 
