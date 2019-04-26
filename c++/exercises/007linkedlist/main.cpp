@@ -18,6 +18,9 @@ int main(){
     cout << "last element is " << arr1.getLast() <<endl; 
 
     arr1.removeFirst();
+    arr1.insertLast(1);
+    arr1.insertLast(2);
+    
     arr1.print();
 
     return 0;

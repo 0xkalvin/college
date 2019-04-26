@@ -36,6 +36,16 @@ void LinkedList<T>::insertFirst(const T &elem){
     this->head = aux;
 }
 
+template <typename T>
+void LinkedList<T>::insertLast(const T &elem){
+    Node<T> *last = new Node<T>();
+    last->elem = elem;
+    last->next = NULL;
+
+    Node<T> *aux = this->head;
+    while(aux->next != NULL) aux = aux->next;
+    aux->next = last;
+}
 
 template <typename T>
 void LinkedList<T>::removeFirst(){
