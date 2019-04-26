@@ -13,12 +13,13 @@ class LinkedList{
         bool isEmpty() const;
         const T &getLast() const;
         const T &getFirst() const;
+        Node<T> *getHead() const;
         void insertFirst(const T &elem);
         void insertLast(const T &elem);
         void removeFirst();
         void removeLast();
         void invert();
-        void print();
+        void print() const;
 
 
 
