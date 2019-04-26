@@ -1,8 +1,11 @@
+#include <iostream>
 #ifndef NODE_H
 #define NODE_H
 
+template <class T>
+class LinkedList;
 
-template <typename T>
+template <class T>
 class Node{
     private:
         T elem;

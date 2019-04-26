@@ -18,6 +18,7 @@ class LinkedList{
         void removeFirst();
         void removeLast();
         void invert();
+        void print();
 
 
 

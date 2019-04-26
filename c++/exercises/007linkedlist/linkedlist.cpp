@@ -22,7 +22,7 @@ const T &LinkedList<T>::getFirst() const {
 
 template <typename T>
 const T &LinkedList<T>::getLast() const {
-    Node<T> aux = this->head;
+    Node<T> *aux = this->head;
     while(aux->next != NULL) aux = aux->next;
     return aux->elem; 
 }
@@ -30,7 +30,7 @@ const T &LinkedList<T>::getLast() const {
 
 template <typename T>
 void LinkedList<T>::insertFirst(const T &elem){
-    Node<T> aux = new Node<T>();
+    Node<T> *aux = new Node<T>();
     aux->elem = elem;
     aux->next = this->head;
     this->head = aux;
@@ -40,9 +40,24 @@ void LinkedList<T>::insertFirst(const T &elem){
 template <typename T>
 void LinkedList<T>::removeFirst(){
     if(!this->isEmpty()){
-        Node *aux = this->head;
+        Node<T> *aux = this->head;
         this->head = this->head->next;
         delete aux;
     }
 }
 
+
+template <typename T>
+void LinkedList<T>::print(){
+    Node<T> *aux = this->head;
+    std::cout << "[ ";
+    while(aux != NULL){ 
+        if(aux->next != NULL)std::cout << aux->elem <<", ";
+        else std::cout << aux->elem; 
+        aux = aux->next;
+    }
+    std::cout <<" ]"<<std::endl;
+
+}
+
+    
