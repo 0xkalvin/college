@@ -1,14 +1,14 @@
 #include <ostream>
 #ifndef DLL
 #define DLL
-#include "node.h"
+#include "dnode.h"
 
 
 template <typename T>
 class Dll{
     private:
-        Node<T> *head;
-        Node<T> *tail;
+        DNode<T> *head;
+        DNode<T> *tail;
 
     public:
         Dll();
@@ -16,7 +16,7 @@ class Dll{
         bool isEmpty() const;
         const T &getFirst() const;
         const T &getLast() const;
-        Node<T> *getHead() const;
+        DNode<T> *getHead() const;
         void insertFirst(const T &elem);
         void insertLast(const T &elem);
         void removeFirst();

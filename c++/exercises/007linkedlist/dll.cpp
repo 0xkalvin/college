@@ -27,6 +27,36 @@ const T &Dll<T>::getLast() const {
 }
 
 template <typename T>
-Node<T> *Dll<T>::getHead() const {
+DNode<T> *Dll<T>::getHead() const {
     return this->head;
+}
+
+template <typename T>
+void Dll<T>::insertFirst(const T &elem){
+    DNode<T> *first = new DNode<T>();
+    first->elem = elem;
+    first->prev = NULL;
+    if(this->isEmpty()){
+        first->next = NULL;
+        this->head = this-> tail = first;
+    }
+    else{
+        first->next = this->head;
+        this->head->prev = first;
+        this->head = first; 
+    }
+}
+
+
+
+template <typename T>
+void Dll<T>::print() const {
+    DNode<T> *aux = this->head;
+    std::cout << "[ ";
+    while(aux != this->tail){ 
+        std::cout << aux->elem <<", ";
+        aux = aux->next;
+    }
+    std::cout << this->tail->elem<< " ]"<<std::endl;
+
 }
