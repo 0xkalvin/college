@@ -8,7 +8,7 @@ Dll<T>::Dll(){
 
 template <typename T>
 Dll<T>::~Dll(){
-    delete this->head;
+    if(!this->isEmpty()) delete this->head;
 }
 
 template <typename T>

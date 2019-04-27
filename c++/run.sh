@@ -2,8 +2,8 @@ clear
 
 cd exercises/007linkedlist
 
-file="main.cpp"
+file="dmain.cpp"
 
-g++ ${file} linkedlist.cpp
+g++ ${file} dll.cpp
 
 ./a.out
