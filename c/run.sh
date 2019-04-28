@@ -1,8 +1,8 @@
 clear
 
-cd topics
+cd exercises
 
-file="recursion.c"
+file="002heap.c"
 
 
 cc ${file}
