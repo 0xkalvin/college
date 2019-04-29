@@ -47,6 +47,21 @@ void Dll<T>::insertFirst(const T &elem){
     }
 }
 
+template <typename T>
+void Dll<T>::insertLast(const T &elem){
+    D<T> *last = new DNode<T>();
+    last->next = NULL;
+    last->prev = this->tail;
+    this->tail = last;
+    if(this->isEmpty()) {
+        this->head = last;
+        
+    }
+    else{
+        
+    }
+}
+
 
 
 template <typename T>
