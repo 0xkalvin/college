@@ -2,8 +2,8 @@ clear
 
 cd exercises/007linkedlist
 
-file="dmain.cpp"
+file="pmain.cpp"
 
-g++ ${file} dll.cpp
+g++ ${file} polynomial.cpp linkedlist.cpp monomial.cpp 
 
 ./a.out
