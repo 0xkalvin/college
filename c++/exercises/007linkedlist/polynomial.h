@@ -1,19 +1,15 @@
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
-#include "linkedlist.h"
 #include "monomial.h"
+#include "linkedlist.cpp"
 
 
-template <typename T>
-class Polynomial : public LinkedList{
-    private:
-        Monomial<T> *head;
-
+class Polynomial : public LinkedList<Monomial>{
     public:
         Polynomial();
         ~Polynomial();
         void print();
-        T resolve(int k);
+        double resolve(int k);
 };
 
 #endif 

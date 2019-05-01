@@ -1,18 +1,15 @@
 #include "polynomial.h"
 
 
+Polynomial::Polynomial() : LinkedList<Monomial>(){}
 
-template <typename T>
-Polynomial<T>::Polynomial(){
+Polynomial::~Polynomial(){}
 
-}
-
-template <typename T>
-Polynomial<T>::~Polynomial(){
-    
-}
-
-template <typename T>
-void Polynomial<T>::print(){
-
+void Polynomial::print(){
+    Node<Monomial> *aux = this->getHead();
+    while(aux != NULL){
+        std::cout <<" "<< aux->elem.getCoefficient() << "x^" << aux->elem.getExponent();
+        aux = aux->next;
+    }
+    std::cout <<std::endl;
 }
