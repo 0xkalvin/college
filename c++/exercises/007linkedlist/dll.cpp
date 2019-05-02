@@ -36,6 +36,20 @@ DNode<T> *Dll<T>::getTail() const {
     return this->tail;
 }
 
+template<typename T>
+const int Dll<T>::getSize() const {
+    if(this->isEmpty()) return 0;
+    else{
+        DNode<T> *aux = this->getHead();
+        int size = 0;
+        while(aux != NULL){
+            size++;
+            aux = aux->next;
+        }
+        return size;
+    }
+}
+
 template <typename T>
 void Dll<T>::insertFirst(const T &elem){
     DNode<T> *first = new DNode<T>();
@@ -67,6 +81,33 @@ void Dll<T>::insertLast(const T &elem){
         this->tail->next = last;
         this->tail = last;
     }
+}
+
+template <typename T>
+void Dll<T>::insertAt(const T &elem, int k){
+    if(k >= this->getSize() || k < 0) throw new std::string("Out of range! \n");
+    else{
+        if(this->getSize() - 1 == k){
+            this->insertLast(elem);
+            return;
+        }
+        else{
+            DNode<T> *aux = this->getHead();
+            int count = 0;
+            while(count != k){
+                count++;
+                aux = aux->next;
+            }
+            DNode<T> *newElem = new DNode<T>();
+            newElem->elem = elem;
+            newElem->next = aux->next;
+            newElem->prev = aux;
+            aux->next->prev = newElem;
+            aux->next = newElem;
+        }
+ 
+    }
+ 
 }
 
 template <typename T>

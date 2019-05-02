@@ -18,8 +18,10 @@ class Dll{
         const T &getLast() const;
         DNode<T> *getHead() const;
         DNode<T> *getTail() const;
+        const int getSize() const;
         void insertFirst(const T &elem);
         void insertLast(const T &elem);
+        void insertAt(const T &elem, int k);
         void removeFirst();
         void removeLast();
         void invert();
