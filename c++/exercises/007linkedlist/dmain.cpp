@@ -11,12 +11,16 @@ int main(){
     arr1.insertFirst(10);
     arr1.insertFirst(20);
     arr1.insertFirst(30);
-
-    cout << "first element is " << arr1.getFirst() <<endl; 
-    cout << "last element is " << arr1.getLast() <<endl; 
-
+    arr1.insertLast(100);
     
     cout << "Doubly Linked list :" <<endl;
+    arr1.print();
+
+
+    arr1.removeFirst();
+    arr1.removeLast();
+
+
     arr1.print();
 
 
