@@ -32,6 +32,11 @@ DNode<T> *Dll<T>::getHead() const {
 }
 
 template <typename T>
+DNode<T> *Dll<T>::getTail() const {
+    return this->tail;
+}
+
+template <typename T>
 void Dll<T>::insertFirst(const T &elem){
     DNode<T> *first = new DNode<T>();
     first->elem = elem;

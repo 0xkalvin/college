@@ -17,6 +17,7 @@ class Dll{
         const T &getFirst() const;
         const T &getLast() const;
         DNode<T> *getHead() const;
+        DNode<T> *getTail() const;
         void insertFirst(const T &elem);
         void insertLast(const T &elem);
         void removeFirst();
