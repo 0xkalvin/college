@@ -91,10 +91,14 @@ void Dll<T>::insertAt(const T &elem, int k){
             this->insertLast(elem);
             return;
         }
+        else if(k == 0){
+            this->insertFirst(elem);
+            return;
+        }
         else{
             DNode<T> *aux = this->getHead();
             int count = 0;
-            while(count != k){
+            while(count != k - 1){
                 count++;
                 aux = aux->next;
             }
@@ -142,6 +146,16 @@ void Dll<T>::removeLast(){
     }
 }
 
+template <typename T>
+void Dll<T>::exchangeEdge(){
+    if(this->getSize() > 1){
+        T aux = this->head->elem;
+        this->head->elem = this->tail->elem;
+        this->tail->elem = aux;
+    }
+    else return;
+
+}
 
 template <typename T>
 void Dll<T>::print() const {
