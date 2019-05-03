@@ -1,5 +1,5 @@
 
-# TRAVERSAL TREE
+# TREE TRAVERSAL 
 
 class Node:
     def __init__(self, value):
