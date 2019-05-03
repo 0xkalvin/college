@@ -47,7 +47,12 @@ void printInOrder(Node *root){
 
 
 int main(){
-
+    /*
+                    100
+            90              80
+        75      78      50
+    */
+    
     Node *root = new Node(100);
     root->left = new Node(90);
     root->right = new Node(80);
@@ -55,19 +60,20 @@ int main(){
     root->left->right = new Node(78);
     root->right->left = new Node(50);
 
-    cout << " PRE ORDER:     ";
+    cout << " PRE ORDER: " <<endl;
     
     printPreOrder(root);
 
-    cout <<endl << " POST ORDER:    ";
+    cout << endl <<" POST ORDER: " <<endl;
     
     printPostOrder(root);
 
-    cout <<endl << " IN ORDER:      ";
+    cout << endl << " IN ORDER: " <<endl;
 
     printInOrder(root);
 
     cout <<endl;
+
 
 
 
