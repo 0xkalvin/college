@@ -10,10 +10,11 @@ int main(){
     p1.insertLast(Monomial(2,3));
     p1.insertLast(Monomial(3,3));
 
-    cout << "p(x) is ";
+    cout << "p(x) = ";
     p1.print();
 
-    cout << "p(1) is " << p1.resolve(1) <<endl;
+    int x = 0;
+    cout << "p("<< x <<") = " << p1.resolve(x) <<endl;
 
     
     return 0;

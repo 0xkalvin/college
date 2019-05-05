@@ -29,7 +29,7 @@ int main(){
     arr1.insertAfter(node1);
 
 
-    //arr1.print();
+    arr1.print();
 
 
     return 0;

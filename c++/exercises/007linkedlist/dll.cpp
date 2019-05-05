@@ -118,18 +118,16 @@ template <typename T>
 void Dll<T>::insertAfter(DNode<T> *p){
     if(this->getSize() <= 1) return;
     else{
-        DNode<T> *aux = this->head;
-        while (aux != NULL) {
-            if (aux == p) {
-                p->prev = aux;
-                p->next = aux->next;
-                aux->next->prev = p;
-                aux->next = p;
-                break;
-            }
+        DNode<T> *aux = this->getHead();
+        while(aux != p){
             aux = aux->next;
         }
-           
+        DNode<T> *newElem = new DNode<T>();
+        newElem->elem = p->elem;
+        newElem->next = aux->next;
+        newElem->prev = aux;
+        aux->next->prev = newElem;
+        aux->next = newElem;     
     }
 }
 
@@ -180,10 +178,11 @@ template <typename T>
 void Dll<T>::print() const {
     DNode<T> *aux = this->head;
     std::cout << "[ ";
-    while(aux != this->tail){ 
-        std::cout << aux->elem <<", ";
+    while(aux != NULL){ 
+        if(aux->next == NULL) std::cout << aux->elem <<" ";
+        else std::cout << aux->elem <<", ";
         aux = aux->next;
     }
-    std::cout << this->tail->elem<< " ]"<<std::endl;
+    std::cout << "]"<<std::endl;
 
 }
