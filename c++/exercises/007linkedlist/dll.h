@@ -22,7 +22,7 @@ class Dll{
         void insertFirst(const T &elem);
         void insertLast(const T &elem);
         void insertAt(const T &elem, int k);
-        void insertAfter(const DNode<T> *p);
+        void insertAfter(DNode<T> *p);
         void removeFirst();
         void removeLast();
         void invert();

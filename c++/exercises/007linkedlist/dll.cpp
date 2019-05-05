@@ -115,6 +115,25 @@ void Dll<T>::insertAt(const T &elem, int k){
 }
 
 template <typename T>
+void Dll<T>::insertAfter(DNode<T> *p){
+    if(this->getSize() <= 1) return;
+    else{
+        DNode<T> *aux = this->head;
+        while (aux != NULL) {
+            if (aux == p) {
+                p->prev = aux;
+                p->next = aux->next;
+                aux->next->prev = p;
+                aux->next = p;
+                break;
+            }
+            aux = aux->next;
+        }
+           
+    }
+}
+
+template <typename T>
 void Dll<T>::removeFirst(){
     if(!this->isEmpty()){
         if(this->head != this->tail){
