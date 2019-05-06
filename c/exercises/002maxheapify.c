@@ -22,20 +22,6 @@ void maxHeapify(int array[], int index, int size){
     }
 }
 
-int main()
-{
-
-    int arr[] = {16, 4, 10, 14, 7, 9, 3, 2, 8, 1};
-
-    printa_vetor(arr, 10);
-
-    maxHeapify(arr, 1, 9);
-
-    printa_vetor(arr, 10);
-
-    return 0;
-}
-
 void printa_vetor(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
