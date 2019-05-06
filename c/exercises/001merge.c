@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 void printArray(int *array, int tam);
+void mergeSort(int array[], int start, int end);
+
 
 int *intercala(int vetor1[], int vetor2[], int tam1, int tam2)
 {
@@ -42,8 +44,8 @@ void merge(int array[], int start, int mid, int end){
     
     int i, j, k;
     // fill both arrays 
-    for(i = 0; i < n1; i++) left[i] = array[start + i];
-    for(j = 0; j < n2; j++) right[j] = array[mid + 1 + j];
+    for(i = 1; i < n1; i++) left[i] = array[start + i];
+    for(j = 1; j < n2; j++) right[j] = array[mid + 1 + j];
 
     i = 0;
     j = 0; 
@@ -58,6 +60,9 @@ void merge(int array[], int start, int mid, int end){
         }
     }
 }
+
+
+
 
 int main()
 {
@@ -82,4 +87,13 @@ void printArray(int *array, int tam)
     for (int i = 0; i < tam; i++)   printf(" %2d", array[i]);
     printf(" ]");
     printf("\n\n");
+}
+
+void mergeSort(int array[], int start, int end){
+    if(start < end){
+        int mid = (start+end)/2;
+        mergeSort(array, start, mid);
+        mergeSort(array, mid+1, end);
+        merge(array, start, mid, end);
+    }
 }

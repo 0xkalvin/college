@@ -3,8 +3,18 @@
 
 void buildMaxHeap(int array[], int size){
     int heapSize = size;
-    for(int i = size; i > 0; --i){
+    for(int i = size/2; i > 0; --i){
         maxHeapify(array, i, heapSize);
+    }
+}
+
+void heapSort(int array[], int size){
+    int heapSize = size;
+    buildMaxHeap(array, size);
+    for(int i = size; i > 1; --i){
+        array[1] = array[i];
+        heapSize--;
+        maxHeapify(array, 1, size);
     }
 }
 
