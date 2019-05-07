@@ -3,10 +3,7 @@
 using namespace std;
 
 int main(){
-
-
     Dll<int> arr1;
-
 
     arr1.insertFirst(40);
     arr1.insertFirst(10);
@@ -24,13 +21,11 @@ int main(){
 
     arr1.print();
 
-
-    DNode<int> *node1 = arr1.getHead();
-    arr1.insertAfter(node1);
-
+    for(int i = 0; i < arr1.getSize(); i++){
+        arr1[i] = i*i;
+    }
 
     arr1.print();
-
 
     return 0;
 }

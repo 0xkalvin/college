@@ -196,7 +196,6 @@ T &Dll<T>::operator[](int index){
         count++;
         aux= aux->next;
     }
-
     return aux->elem;
     
 }
