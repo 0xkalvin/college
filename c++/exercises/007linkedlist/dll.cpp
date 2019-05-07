@@ -186,3 +186,17 @@ void Dll<T>::print() const {
     std::cout << "]"<<std::endl;
 
 }
+
+template <typename T>
+T &Dll<T>::operator[](int index){
+    if(index >= this->getSize() || index < 0) throw new std::string("Out of range");
+    DNode<T> *aux = this->getHead();
+    int count = 0;
+    while(count != index){
+        count++;
+        aux= aux->next;
+    }
+
+    return aux->elem;
+    
+}

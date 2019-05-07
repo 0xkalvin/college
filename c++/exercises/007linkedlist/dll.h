@@ -28,6 +28,7 @@ class Dll{
         void invert();
         void exchangeEdge();
         void print() const;
+        T &operator[](int index);
 
 };
 
