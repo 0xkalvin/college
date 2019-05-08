@@ -104,3 +104,12 @@ T &Array<T>::operator[](int index){
         std::cout << "Error: " << e <<std::endl;
     }
 }
+
+template<typename T>
+void Array<T>::invert(){
+  for(int i = 0; i< (this->size-1)/2; i++){
+    T aux = this->v[i];
+    this->v[i] = this->v[this->size - i - 1];
+    this->v[this->size - i - 1] = aux;
+  }
+}

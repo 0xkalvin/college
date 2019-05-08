@@ -18,6 +18,7 @@ public:
     Array<T> concat(Array& arr);
     void print();
     T &operator[](int index);
+    void invert();
 };
 
 #endif
