@@ -199,3 +199,21 @@ T &Dll<T>::operator[](int index){
     return aux->elem;
     
 }
+
+template <typename T>
+void Dll<T>::invert(){
+    if(this->getSize() <= 1)    return;
+    else{
+        DNode<T> *start = this->getHead();
+        DNode<T> *end = this->getTail();
+
+        while(start != end && start->prev != end){
+            T temp = start->elem;
+            start->elem = end->elem;
+            end->elem = temp;
+            
+            start = start->next;
+            end = end->prev;
+        }
+    }
+}
