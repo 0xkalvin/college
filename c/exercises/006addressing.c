@@ -1,30 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printaVetor(int arr[], int size);
+void printaVetor(int vetor[], int tam);
 
-void directAddressing(int arr[], int min, int max, int size){
-    int n = max + 1;
-    int *p = (int*)malloc(n*sizeof(int));
-    
+void enderecamentoDireto(int vetor[], int maxElem, int tam){
+    // cria vetor auxiliar com tamanho maxElem + 1
+    // suficientemente grande para gravar todos elementos do vetor
+    int *aux = (int*)malloc((maxElem + 1)*sizeof(int));
     int i, j;
-    for(i = 0 ; i < n; i++) p[i] = 0;
 
-    for(i = 0; i < size; i++)   p[arr[i]]++;
+    // inicializa todos elementos com zero
+    for(i = 0 ; i < maxElem + 1; i++) aux[i] = 0;
+
+    // conta quantas ocorrencias de cada elemento do vetor em cada posicao
+    for(i = 0; i < tam; i++)   aux[vetor[i]]++;
     
     i = 0;
     j = 0;
-    while(i < n){
-        if(p[i] != 0){
-            if(p[i] == 1){
-                arr[j] = i;
+    // percorre vetor auxiliar e quando seu elemento for diferente de 0,
+    // posiciona o numero de sua posicao no vetor principal 
+    while(i < maxElem + 1){
+        if(aux[i] != 0){
+            if(aux[i] == 1){
+                vetor[j] = i;
                 j++;
             } 
             else{
-                while(p[i] >= 1){
-                    arr[j] = i;
+                while(aux[i] >= 1){ // tratamento para elementos repetidos
+                    vetor[j] = i;  
                     j++;
-                    p[i]--;
+                    aux[i]--;
                 }
             }  
         }
@@ -35,19 +40,20 @@ void directAddressing(int arr[], int min, int max, int size){
 
 int main(){
 
-    int array[] = {10, 9, 0, 3, 4, 4, 7, 6, 8, 8};
-    int size = 10;
+    int v[] = {15, 9, 0, 3, 4, 4, 7, 6, 8, 8};
+    int tam = 10;
+    int maxElem = 15;
 
-    printaVetor(array, size);
-    directAddressing(array, 0, 10, size);
-    printaVetor(array, size);
+    printaVetor(v, tam);
+    enderecamentoDireto(v, maxElem, tam);
+    printaVetor(v, tam);
 
     return 0;
 }
 
-void printaVetor(int arr[], int size)
+void printaVetor(int vetor[], int tam)
 {
-    for (int i = 0; i < size; i++)
-        printf(" %d", arr[i]);
+    for (int i = 0; i < tam; i++)
+        printf(" %d", vetor[i]);
     printf("\n\n");
 }
