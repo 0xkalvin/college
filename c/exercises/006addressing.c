@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 void printaVetor(int vetor[], int tam);
+int *criaVetorAleatorio(int tam);
 
-void enderecamentoDireto(int vetor[], int maxElem, int tam){
+void ordernaPorEnderecamentoDireto(int vetor[], int maxElem, int tam){
     // cria vetor auxiliar com tamanho maxElem + 1
     // suficientemente grande para gravar todos elementos do vetor
     int *aux = (int*)malloc((maxElem + 1)*sizeof(int));
@@ -41,12 +43,15 @@ void enderecamentoDireto(int vetor[], int maxElem, int tam){
 int main(){
 
     int v[] = {15, 9, 0, 3, 4, 4, 7, 6, 8, 8};
-    int tam = 10;
-    int maxElem = 15;
+    int tam = 100;
+    int maxElem = 100;
+    int *v1 = criaVetorAleatorio(tam);
 
-    printaVetor(v, tam);
-    enderecamentoDireto(v, maxElem, tam);
-    printaVetor(v, tam);
+    printf("VETOR DESORDENADO: \n");
+    printaVetor(v1, tam);
+    ordernaPorEnderecamentoDireto(v1, maxElem, tam);
+    printf("\nVETOR ORDENADO: \n");
+    printaVetor(v1, tam);
 
     return 0;
 }
@@ -56,4 +61,11 @@ void printaVetor(int vetor[], int tam)
     for (int i = 0; i < tam; i++)
         printf(" %d", vetor[i]);
     printf("\n\n");
+}
+
+int *criaVetorAleatorio(int tam){
+    int *p =(int*)malloc(tam*sizeof(int));
+    srand(time(NULL));
+    for(int i = 0; i < tam; i++) p[i] = rand() % 99;
+    return p;
 }
