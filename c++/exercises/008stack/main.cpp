@@ -8,6 +8,9 @@ int main(){
     pilha.push(20);
     pilha.push(30);
 
+    pilha.print();
+
+    pilha.pop();
 
     pilha.print();
 
