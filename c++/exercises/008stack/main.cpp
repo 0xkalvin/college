@@ -1,5 +1,7 @@
 #include "stack.cpp"
 
+using namespace std;
+
 int main(){
 
     Stack<int> pilha;
@@ -13,6 +15,9 @@ int main(){
     pilha.pop();
 
     pilha.print();
+
+
+    cout << "top is " << pilha.getTop() <<endl;
 
     return 0;
 }

@@ -29,7 +29,7 @@ void Stack<T>::pop(){
 
 template <typename T>
 const T &Stack<T>::getTop() const{
-    return this->p->getHead();
+    return this->p->getLast();
 }
 
 template <typename T>
