@@ -2,14 +2,14 @@
 
 int main(){
 
-    Stack<int> *pilha;
+    Stack<int> pilha;
 
-    pilha->push(10);
-    pilha->push(20);
-    pilha->push(30);
+    pilha.push(10);
+    pilha.push(20);
+    pilha.push(30);
 
 
-    pilha->print();
+    pilha.print();
 
     return 0;
 }
