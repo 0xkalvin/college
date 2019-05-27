@@ -14,7 +14,7 @@ class Stack{
         void push(const T &e);
         void pop();
         const T &getTop() const;
-
+        void print();
 };
 
 #endif

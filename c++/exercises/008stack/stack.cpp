@@ -8,7 +8,7 @@ Stack<T>::Stack(){
 }
 
 template <typename T>
-Stack<T>::Stack(){
+Stack<T>::~Stack(){
     delete this->p;
 }
 
@@ -30,4 +30,9 @@ void Stack<T>::pop(){
 template <typename T>
 const T &Stack<T>::getTop() const{
     return this->p->getHead();
+}
+
+template <typename T>
+void Stack<T>::print(){
+    this->p->print();
 }
