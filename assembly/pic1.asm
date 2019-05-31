@@ -1,3 +1,6 @@
+; kalvin 31894666
+; roger 31849571
+
 LIST P=16F628, R=DEC    ; Use the PIC16F628 and decimal system
 
         #include "P16F628.INC"  ; Include header file
