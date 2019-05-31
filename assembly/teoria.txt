@@ -1,0 +1,22 @@
+RESUMAO DE ORGANIZACAO 
+
+ARQUITETURA RISC x CISC (DIVERGE EM NÚMERO DE INSTRUÇÕES)
+
+RISC
+    -   aumenta número de instruções e, portanto, reduz o custo de processamento por instrução,
+        reduzindo o número de ciclos por instrução;
+
+CISC
+    -   diminiu número de instruções e, portanto, aumenta o custo de processamento por instrução,
+        aumentando o número de ciclos por instrução;
+
+ARQUITETURA HARVARD x VON NEUMANN (ARQUITETURA DE PROCESSADOR)
+
+VON NEUMANN
+    -   usa a mesma memória e barramento para armazenamento e transferência de dados e instruções, 
+        portanto não é possível acessar ambos simultaneamente;
+
+HARVARD
+    -   dados e instruções são armazenados em diferentes locais de memória e, portanto, podem ser 
+        acessados simultaneamente. É mais rápido.
+        
