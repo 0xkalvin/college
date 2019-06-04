@@ -1,9 +1,9 @@
 clear
 
-cd exercises/007linkedlist
+cd exercises/prova
 
-file="pmain.cpp"
+file="main.cpp"
 
-g++ ${file} polynomial.cpp linkedlist.cpp monomial.cpp 
+g++ ${file} pilha.cpp lista.cpp
 
 ./a.out

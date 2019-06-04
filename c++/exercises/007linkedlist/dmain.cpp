@@ -27,5 +27,10 @@ int main(){
 
     arr1.print();
 
+    arr1.invert();
+
+
+    arr1.print();
+
     return 0;
 }
