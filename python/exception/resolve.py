@@ -4,7 +4,7 @@ def check_value(n):
     try:
         x =  n / n
     except Exception as err:
-        raise ValueError("input cannot be zero")
+        raise err
     else:
         print("the result is ", x)
     finally:

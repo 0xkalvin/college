@@ -15,7 +15,7 @@ soma:
         li $t2, 0   # soma
 
 for:    beq $t0, $t1, done
-        lw $t4, ($a0)       # $t4 = arr[i]
+        lw $t4, $t0($a0)       # $t4 = arr[i]
         add $t2, $t2, $t4   # soma += arr[i]
         addi $t0, $t0, 1    # i++
         addi $a0,$a0,4      # arruma endereco
