@@ -27,7 +27,7 @@ def print_in_order(root):
     # left -> root -> right
     if root:
         print_in_order(root.left)
-        print(root.data)
+        print(root.data, end=" ")
         print_in_order(root.right)
 
 def main():
@@ -43,4 +43,20 @@ def main():
     print("IN ORDER")
     print_in_order(root)
 
-main()
+def expression():
+        root = Node("*")
+        root.left = Node("/")
+        root.right = Node("+")
+        root.right.left = Node("e")
+        root.right.right = Node("f")
+        root.left.left = Node("+")
+        root.left.right = Node("-")
+        root.left.left.left = Node("a")
+        root.left.left.right = Node("b")
+        root.left.right.left = Node("c")
+        root.left.right.right = Node("d")
+
+        print("IN ORDER")
+        print_in_order(root)
+
+expression()
