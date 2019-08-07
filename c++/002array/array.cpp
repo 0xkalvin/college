@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <iostream>
-#include "adtArray-header.h"
+#include "array.h"
 
-adtArray::adtArray()
+Array::Array()
 {
     for (int i = 0; i < SIZE; i++)
     {
@@ -10,7 +10,7 @@ adtArray::adtArray()
     }
 }
 
-void adtArray::print(int array[])
+void Array::print(int array[])
 {
     cout << "[";
     for (int i = 0; i < SIZE; i++)
@@ -20,7 +20,7 @@ void adtArray::print(int array[])
     cout << "]"<<endl;
 }
 
-string adtArray::addElement(int n, int position)
+string Array::addElement(int n, int position)
 {
     position--;
     if (position < 1 || position > SIZE)
@@ -36,7 +36,7 @@ string adtArray::addElement(int n, int position)
     return "Added it successfully! ";
 }
 
-string adtArray::deleteElement(int position)
+string Array::deleteElement(int position)
 {
     position--;
     if (position < 1 || position > SIZE)
@@ -51,7 +51,7 @@ string adtArray::deleteElement(int position)
     return "Number deleted successfully! ";
 }
 
-string adtArray::exchangeElementsPosition(int pos1, int pos2)
+string Array::exchangeElementsPosition(int pos1, int pos2)
 {
     pos1--;
     pos2--;
@@ -71,7 +71,7 @@ string adtArray::exchangeElementsPosition(int pos1, int pos2)
     return "elements position exchanged successfully! ";
 }
 
-string adtArray::findMaxAndMin()
+string Array::findMaxAndMin()
 {
     int max, min;
     max = numbers[0];
@@ -92,7 +92,7 @@ string adtArray::findMaxAndMin()
     return "Max is " + to_string(max) + " and min is " + to_string(min);
 }
 
-void adtArray::selectionSort()
+void Array::selectionSort()
 {
     for (int i = 0; i < SIZE; i++)
     {
@@ -112,7 +112,7 @@ void adtArray::selectionSort()
     cout << "\nArray successfully sorted ";
 }
 
-void adtArray::invertArray(int arr[]) 
+void Array::invertArray(int arr[]) 
 { 
     int start = 0;
     int end = SIZE-1;
@@ -126,7 +126,7 @@ void adtArray::invertArray(int arr[])
     }  
 } 
 
-int* adtArray::newSortedArray()
+int* Array::newSortedArray()
 {
     for (int i = 0; i < SIZE; i++)
     {
@@ -148,6 +148,6 @@ int* adtArray::newSortedArray()
     return numbers;
 }
 
-int* adtArray::getNumbers(){
+int* Array::getNumbers(){
     return numbers;
 }

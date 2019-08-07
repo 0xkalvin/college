@@ -6,13 +6,13 @@ using namespace std;
 
 
 
-class adtArray {
+class Array {
     
     private:
         int numbers[SIZE];
     
     public:
-        adtArray();
+        Array();
         void print(int array[]);
         string addElement(int n, int position);
         string deleteElement(int position); 

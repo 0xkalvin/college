@@ -1,5 +1,4 @@
-#include <iostream>
-#include "adtArray-header.h"
+#include "array.h"
 
 using namespace std;
 
@@ -8,7 +7,7 @@ int main()
 {
     int *new_array;
     
-    adtArray array;
+    Array array;
 
 
     system("clear");
