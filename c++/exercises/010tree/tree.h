@@ -18,8 +18,10 @@ class Tree {
         void postOrder(Node *n);
         void preOrder(Node *n);
         int getNumberOfNodes(Node *n);
+        int getTotal(Node *n);
         void printLeafs(Node *n);
-        void printGreaterThanAverage(Node *n);
+        void printGreaterThanAverage(Node *n, double average);
+        double getAverage(Node *n);
 };
 
 

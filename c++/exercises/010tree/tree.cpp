@@ -90,3 +90,23 @@ void Tree::printLeafs(Node *n){
     }
 }
 
+void Tree::printGreaterThanAverage(Node *n, double average){
+    if(n == NULL)   return;
+    else{
+        if(n->getValue() > average){
+            cout << n->getValue() << " ";
+        }
+        this->printGreaterThanAverage(n->getLeft(), average);
+        this->printGreaterThanAverage(n->getRight(), average);
+    }
+    
+}
+
+int Tree::getTotal(Node *n){
+    if(n == NULL) return 0;
+    else    return n->getValue() + this->getTotal(n->getLeft()) + this->getTotal(n->getRight());
+}
+
+double Tree::getAverage(Node* n){
+    return (double)this->getTotal(n) / this->getNumberOfNodes(n);
+}

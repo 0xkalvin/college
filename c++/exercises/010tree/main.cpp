@@ -40,7 +40,13 @@ int main(){
 
     cout << "NUMBER OF NODES IS " << t.getNumberOfNodes(t.getRoot()) << endl;
 
+    cout << "LEAFS: ";
     t.printLeafs(t.getRoot());
+
+    cout << "\n AVERAGE IS " << t.getAverage(t.getRoot()) << endl;
+
+    cout << "NODES GREATER THAN AVERAGE: ";
+    t.printGreaterThanAverage(t.getRoot(), t.getAverage(t.getRoot()));
 
 
     return 0;
