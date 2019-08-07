@@ -11,10 +11,10 @@ void buildMaxHeap(int array[], int size){
 void heapSort(int array[], int size){
     int heapSize = size;
     buildMaxHeap(array, size);
-    for(int i = size; i > 1; --i){
-        array[1] = array[i];
+    for(int i = size; i > 0; --i){
+        array[0] = array[i];
         heapSize--;
-        maxHeapify(array, 1, size);
+        maxHeapify(array, 0, size);
     }
 }
 
@@ -25,9 +25,10 @@ int main()
 
     printa_vetor(arr, 10);
 
-    buildMaxHeap(arr, 9);
+    heapSort(arr, 10);
 
     printa_vetor(arr, 10);
+
 
     return 0;
 }
@@ -37,4 +38,11 @@ int main()
                 14              10
             4       8       9       3
         2       7       1
+
+
+
+                            16
+                4                       10
+        14              7          9            3
+    2       8        1
 */          

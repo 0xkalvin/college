@@ -12,7 +12,7 @@ void maxHeapify(int array[], int index, int size){
     if(left <= size && array[left] > array[index]) largest = left;
     else largest = index;
 
-    if(right <= size && array[right] > array[index]) largest = right;
+    if(right <= size && array[right] > array[largest]) largest = right;
 
     if(largest != index){
         int temp = array[index];
@@ -28,3 +28,4 @@ void printa_vetor(int arr[], int size)
         printf(" %d", arr[i]);
     printf("\n\n");
 }
+

@@ -40,21 +40,21 @@ void ordernaPorEnderecamentoDireto(int vetor[], int maxElem, int tam){
 }
 
 
-int main(){
+// int main(){
 
-    int v[] = {15, 9, 0, 3, 4, 4, 7, 6, 8, 8};
-    int tam = 100;
-    int maxElem = 100;
-    int *v1 = criaVetorAleatorio(tam);
+//     int v[] = {15, 9, 0, 3, 4, 4, 7, 6, 8, 8};
+//     int tam = 100;
+//     int maxElem = 100;
+//     int *v1 = criaVetorAleatorio(tam);
 
-    printf("VETOR DESORDENADO: \n");
-    printaVetor(v1, tam);
-    ordernaPorEnderecamentoDireto(v1, maxElem, tam);
-    printf("\nVETOR ORDENADO: \n");
-    printaVetor(v1, tam);
+//     printf("VETOR DESORDENADO: \n");
+//     printaVetor(v1, tam);
+//     ordernaPorEnderecamentoDireto(v1, maxElem, tam);
+//     printf("\nVETOR ORDENADO: \n");
+//     printaVetor(v1, tam);
 
-    return 0;
-}
+//     return 0;
+// }
 
 void printaVetor(int vetor[], int tam)
 {
@@ -66,6 +66,6 @@ void printaVetor(int vetor[], int tam)
 int *criaVetorAleatorio(int tam){
     int *p =(int*)malloc(tam*sizeof(int));
     srand(time(NULL));
-    for(int i = 0; i < tam; i++) p[i] = rand() % 99;
+    for(int i = 0; i < tam; i++) p[i] = rand() % 1000;
     return p;
 }

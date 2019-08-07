@@ -19,7 +19,7 @@ int main(){
     int size = 100;
     int *v = criaVetorAleatorio(size);
 
-    printf("VETOR DESORDENADO: \n");
+    printf("\nVETOR DESORDENADO: \n");
     printaVetor(v,size);
     radixSort(v, size);
     printf("\nVETOR ORDENADO: \n");

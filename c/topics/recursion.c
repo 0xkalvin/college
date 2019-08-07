@@ -58,16 +58,6 @@ void decimalToBinary(int n){
     }
 }
 
-// void invertArray(int array[], int start, int end){
-//     if(start = end ) return;
-//     else{
-//         int temp = array[end];
-//         array[end] = array[end - start];
-//         array[start] = temp;
-//         return invertArray(array,start+1, end-1);
-//     }
-// }
-
 int arrangement(int n, int p){
     return fatorial(n)/fatorial(n-p);
 }
