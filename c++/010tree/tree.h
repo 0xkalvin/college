@@ -20,7 +20,7 @@ class Tree {
         int getNumberOfNodes(Node *n);
         int getTotal(Node *n);
         void printLeafs(Node *n);
-        void printGreaterThanAverage(Node *n, double average);
+        void printNodesGreaterThanAverage(Node *n, double average);
         double getAverage(Node *n);
 };
 

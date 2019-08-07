@@ -46,7 +46,7 @@ int main(){
     cout << "\n AVERAGE IS " << t.getAverage(t.getRoot()) << endl;
 
     cout << "NODES GREATER THAN AVERAGE: ";
-    t.printGreaterThanAverage(t.getRoot(), t.getAverage(t.getRoot()));
+    t.printNodesGreaterThanAverage(t.getRoot(), t.getAverage(t.getRoot()));
 
 
     return 0;

@@ -90,14 +90,14 @@ void Tree::printLeafs(Node *n){
     }
 }
 
-void Tree::printGreaterThanAverage(Node *n, double average){
+void Tree::printNodesGreaterThanAverage(Node *n, double average){
     if(n == NULL)   return;
     else{
         if(n->getValue() > average){
             cout << n->getValue() << " ";
         }
-        this->printGreaterThanAverage(n->getLeft(), average);
-        this->printGreaterThanAverage(n->getRight(), average);
+        this->printNodesGreaterThanAverage(n->getLeft(), average);
+        this->printNodesGreaterThanAverage(n->getRight(), average);
     }
     
 }
