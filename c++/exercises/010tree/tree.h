@@ -17,8 +17,9 @@ class Tree {
         void inOrder(Node *n);
         void postOrder(Node *n);
         void preOrder(Node *n);
-        int getNumberOfNodes();
-        void printLeafs();
+        int getNumberOfNodes(Node *n);
+        void printLeafs(Node *n);
+        void printGreaterThanAverage(Node *n);
 };
 
 

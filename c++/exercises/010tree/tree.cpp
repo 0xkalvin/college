@@ -71,3 +71,22 @@ void Tree::postOrder(Node*n){
 Node* Tree::getRoot(){
     return this->root;
 }
+
+int Tree::getNumberOfNodes(Node *n){
+    if(n == NULL)   return 0;
+    else    return 1 + this->getNumberOfNodes(n->getLeft()) + this->getNumberOfNodes(n->getRight());
+}
+
+void Tree::printLeafs(Node *n){
+    if(n == NULL){
+        return;
+    }
+    else if(n->getLeft() == NULL && n->getRight() == NULL){
+        cout << n->getValue() << " ";
+    }
+    else{
+        this->printLeafs(n->getLeft());
+        this->printLeafs(n->getRight());
+    }
+}
+
