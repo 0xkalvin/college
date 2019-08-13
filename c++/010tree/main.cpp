@@ -56,7 +56,7 @@ int main(){
     if(t.getElement(t.getRoot(), 20))   cout << "YES"  <<endl;
     else    cout << "NO"  <<endl;
 
-    
+    cout << "\n HEIGHT " << t.getHeight(t.getRoot())<<endl;
 
     return 0;
 }

@@ -125,3 +125,13 @@ bool Tree::getElement(Node* n, int elem){
         return right || left;
     }
 }
+
+int Tree::getHeight(Node *n){
+    if(n == NULL)   return 0;
+    else{
+        if(this->getHeight(n->getLeft()) > this->getHeight(n->getRight()))  
+            return 1 + this->getHeight(n->getLeft());
+        else
+            return 1 + this->getHeight(n->getRight()); 
+    }
+}

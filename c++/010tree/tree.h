@@ -23,7 +23,7 @@ class Tree {
         void printNodesGreaterThanAverage(Node *n, double average);
         double getAverage(Node *n);
         int getSmallest(Node* n);
-        int getHeigth(Node* n);
+        int getHeight(Node* n);
         bool getElement(Node* n, int elem);
 };
 
