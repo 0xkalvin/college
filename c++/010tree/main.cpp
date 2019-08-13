@@ -49,5 +49,14 @@ int main(){
     t.printNodesGreaterThanAverage(t.getRoot(), t.getAverage(t.getRoot()));
 
 
+    cout << "\nSMALLEST VALUE: " << t.getSmallest(t.getRoot());
+    
+
+    cout << "\nFIND ELEMENT: ";
+    if(t.getElement(t.getRoot(), 20))   cout << "YES"  <<endl;
+    else    cout << "NO"  <<endl;
+
+    
+
     return 0;
 }

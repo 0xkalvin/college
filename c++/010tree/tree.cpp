@@ -110,3 +110,18 @@ int Tree::getTotal(Node *n){
 double Tree::getAverage(Node* n){
     return (double)this->getTotal(n) / this->getNumberOfNodes(n);
 }
+
+int Tree::getSmallest(Node* n){
+    if(n->getLeft() == NULL) return n->getValue();
+    else    return this->getSmallest(n->getLeft()); 
+}
+
+bool Tree::getElement(Node* n, int elem){
+    if(n == NULL) return false;
+    else if(n->getValue() == elem)  return true;
+    else{
+        bool left = this->getElement(n->getLeft(), elem);
+        bool right = this->getElement(n->getRight(), elem);
+        return right || left;
+    }
+}
