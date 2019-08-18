@@ -1,30 +1,32 @@
 #ifndef TREE_H
 #define TREE_H
 
-#include "node.h"
+#include "node.cpp"
 
+template  <typename T>
 class Tree {
     private:
-        Node *root;
+        Node<T> *root;
 
     
     public:
         Tree();
         ~Tree();
-        Node* getRoot();
+        Node<T>* getRoot();
         void insert(int v);
-        void insertAux(Node *n, int v);
-        void inOrder(Node *n);
-        void postOrder(Node *n);
-        void preOrder(Node *n);
-        int getNumberOfNodes(Node *n);
-        int getTotal(Node *n);
-        void printLeafs(Node *n);
-        void printNodesGreaterThanAverage(Node *n, double average);
-        double getAverage(Node *n);
-        int getSmallest(Node* n);
-        int getHeight(Node* n);
-        bool getElement(Node* n, int elem);
+        void insertAux(Node<T> *n, int v);
+        void inOrder(Node<T> *n);
+        void postOrder(Node<T> *n);
+        void preOrder(Node<T> *n);
+        int getNumberOfNodes(Node<T> *n);
+        int getTotal(Node<T> *n);
+        void printLeafs(Node<T> *n);
+        void printNodesGreaterThanAverage(Node<T> *n, double average);
+        double getAverage(Node<T> *n);
+        int getSmallest(Node<T>* n);
+        int getHeight(Node<T>* n);
+        Node<T>* getElement(Node<T>* n, int elem);
+        void deleteNode(int v);
 };
 
 

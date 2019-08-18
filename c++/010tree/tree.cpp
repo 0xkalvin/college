@@ -6,25 +6,31 @@
 
  */
 
-Tree::Tree(){
+template  <typename T>
+Tree<T>::Tree(){
     this->root = NULL;
 }
 
-Tree::~Tree(){}
+template  <typename T>
+Tree<T>::~Tree(){
+    delete this->root;
+}
 
-void Tree::insert(int v){
+template  <typename T>
+void Tree<T>::insert(int v){
     if(this->root == NULL){
-        this->root = new Node(v);
+        this->root = new Node<T>(v);
     }
     else{
         this->insertAux(this->root, v);
     }
 }
 
-void Tree::insertAux(Node* n, int v){
+template  <typename T>
+void Tree<T>::insertAux(Node<T>* n, int v){
     if(v < n->getValue()){
         if(n->getLeft() == NULL){
-            n->setLeft(new Node(v));
+            n->setLeft(new Node<T>(v));
         }
         else{
             this->insertAux(n->getLeft(), v);
@@ -32,7 +38,7 @@ void Tree::insertAux(Node* n, int v){
     }
     else if(v > n->getValue()){
         if(n->getRight() == NULL){
-            n->setRight(new Node(v));
+            n->setRight(new Node<T>(v));
         }
         else{
             this->insertAux(n->getRight(), v);
@@ -42,7 +48,8 @@ void Tree::insertAux(Node* n, int v){
 }
 
 // left -> root -> right
-void Tree::inOrder(Node*n){
+template  <typename T>
+void Tree<T>::inOrder(Node<T>*n){
     if(n != NULL){
         this->inOrder(n->getLeft());
         cout <<  n->getValue() << " ";
@@ -51,7 +58,8 @@ void Tree::inOrder(Node*n){
 }
 
 // Root -> Left -> Right
-void Tree::preOrder(Node*n){
+template  <typename T>
+void Tree<T>::preOrder(Node<T>*n){
     if(n != NULL){
         cout <<  n->getValue() << " ";
         this->preOrder(n->getLeft());
@@ -60,7 +68,8 @@ void Tree::preOrder(Node*n){
 }
 
 //  left -> right -> root
-void Tree::postOrder(Node*n){
+template  <typename T>
+void Tree<T>::postOrder(Node<T>*n){
     if(n != NULL){
         this->postOrder(n->getLeft());
         this->postOrder(n->getRight());
@@ -68,16 +77,19 @@ void Tree::postOrder(Node*n){
     }
 }
 
-Node* Tree::getRoot(){
+template  <typename T>
+Node<T>* Tree<T>::getRoot(){
     return this->root;
 }
 
-int Tree::getNumberOfNodes(Node *n){
+template  <typename T>
+int Tree<T>::getNumberOfNodes(Node<T> *n){
     if(n == NULL)   return 0;
     else    return 1 + this->getNumberOfNodes(n->getLeft()) + this->getNumberOfNodes(n->getRight());
 }
 
-void Tree::printLeafs(Node *n){
+template  <typename T>
+void Tree<T>::printLeafs(Node<T> *n){
     if(n == NULL){
         return;
     }
@@ -90,7 +102,8 @@ void Tree::printLeafs(Node *n){
     }
 }
 
-void Tree::printNodesGreaterThanAverage(Node *n, double average){
+template  <typename T>
+void Tree<T>::printNodesGreaterThanAverage(Node<T> *n, double average){
     if(n == NULL)   return;
     else{
         if(n->getValue() > average){
@@ -102,31 +115,35 @@ void Tree::printNodesGreaterThanAverage(Node *n, double average){
     
 }
 
-int Tree::getTotal(Node *n){
+template  <typename T>
+int Tree<T>::getTotal(Node<T> *n){
     if(n == NULL) return 0;
     else    return n->getValue() + this->getTotal(n->getLeft()) + this->getTotal(n->getRight());
 }
 
-double Tree::getAverage(Node* n){
+template  <typename T>
+double Tree<T>::getAverage(Node<T>* n){
     return (double)this->getTotal(n) / this->getNumberOfNodes(n);
 }
 
-int Tree::getSmallest(Node* n){
+template  <typename T>
+int Tree<T>::getSmallest(Node<T>* n){
     if(n->getLeft() == NULL) return n->getValue();
     else    return this->getSmallest(n->getLeft()); 
 }
 
-bool Tree::getElement(Node* n, int elem){
-    if(n == NULL) return false;
-    else if(n->getValue() == elem)  return true;
+template  <typename T>
+Node<T>* Tree<T>::getElement(Node<T>* n, int elem){
+    if(n == NULL) return NULL;
+    else if(n->getValue() == elem)  return n;
     else{
-        bool left = this->getElement(n->getLeft(), elem);
-        bool right = this->getElement(n->getRight(), elem);
-        return right || left;
+        if(elem < n->getValue())    return this->getElement(n->getLeft(), elem);
+        else return this->getElement(n->getRight(), elem);
     }
 }
 
-int Tree::getHeight(Node *n){
+template  <typename T>
+int Tree<T>::getHeight(Node<T> *n){
     if(n == NULL)   return 0;
     else{
         if(this->getHeight(n->getLeft()) > this->getHeight(n->getRight()))  
@@ -134,4 +151,9 @@ int Tree::getHeight(Node *n){
         else
             return 1 + this->getHeight(n->getRight()); 
     }
+}
+
+template  <typename T>
+void Tree<T>::deleteNode(int v){
+    
 }
