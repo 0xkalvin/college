@@ -4,20 +4,21 @@
 #include <iostream>
 using namespace std;
 
+template <typename T>
 class Node {
     private:
-        int data;
-        Node* left;
-        Node* right;
+        T data;
+        Node<T>* left;
+        Node<T>* right;
     
     public:
-        Node(int v);
+        Node(T v);
         ~Node();
-        void setRight(Node* n);
-        void setLeft(Node* n);
-        Node* getLeft();
-        Node* getRight();
-        int getValue();
+        void setRight(Node<T>* n);
+        void setLeft(Node<T>* n);
+        Node<T>* getLeft();
+        Node<T>* getRight();
+        T getValue();
 };
 
 

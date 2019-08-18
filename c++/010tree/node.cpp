@@ -1,33 +1,40 @@
 #include "node.h"
 
 
-Node::Node(int v){
+template <typename T>
+Node<T>::Node(T v){
     this->data = v;
     this->left = NULL;
     this->right = NULL;
 }
 
-Node::~Node(){
+template <typename T>
+Node<T>::~Node(){
     delete this->left;
     delete this->right;
 }
 
-void Node::setLeft(Node* n){
+template <typename T>
+void Node<T>::setLeft(Node* n){
     this->left = n;
 }
 
-void Node::setRight(Node* n){
+template <typename T>
+void Node<T>::setRight(Node* n){
     this->right = n;
 }
 
-Node* Node::getLeft(){
+template <typename T>
+Node<T>* Node<T>::getLeft(){
     return this->left;
 }
 
-Node* Node::getRight(){
+template <typename T>
+Node<T>* Node<T>::getRight(){
     return this->right;
 }
 
-int Node::getValue(){
+template <typename T>
+T Node<T>::getValue(){
     return this->data;
 }
