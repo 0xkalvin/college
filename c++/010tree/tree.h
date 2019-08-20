@@ -26,6 +26,7 @@ class Tree {
         int getSmallest(Node<T>* n);
         int getHeight(Node<T>* n);
         Node<T>* getElement(Node<T>* n, int elem);
+        Node<T>* getElementIterative(Node<T>* n, int elem);
         void deleteNode(int v);
 };
 

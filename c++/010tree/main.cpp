@@ -1,4 +1,4 @@
-#include "tree.h"
+#include "tree.cpp"
 
 /*
     lab:
@@ -16,7 +16,7 @@
 int main(){
 
 
-    Tree t;
+    Tree<int> t;
 
     t.insert(10);
     t.insert(20);
@@ -53,7 +53,10 @@ int main(){
     
 
     cout << "\nFIND ELEMENT: ";
-    if(t.getElement(t.getRoot(), 20))   cout << "YES"  <<endl;
+    if(t.getElement(t.getRoot(), 20) != NULL)   cout << "YES"  <<endl;
+    else    cout << "NO"  <<endl;
+
+    if(t.getElementIterative(t.getRoot(), 20) != NULL)   cout << "YES ITERATIVE"  <<endl;
     else    cout << "NO"  <<endl;
 
     cout << "\n HEIGHT " << t.getHeight(t.getRoot())<<endl;

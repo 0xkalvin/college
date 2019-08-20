@@ -143,6 +143,18 @@ Node<T>* Tree<T>::getElement(Node<T>* n, int elem){
 }
 
 template  <typename T>
+Node<T>* Tree<T>::getElementIterative(Node<T>* n, int elem){
+    while(n != NULL){
+        if(elem > n->getValue())
+            n = n->getRight();
+        else if(elem < n->getValue())
+            n = n->getLeft();
+        else    return n;
+    }
+    return NULL;
+}
+
+template  <typename T>
 int Tree<T>::getHeight(Node<T> *n){
     if(n == NULL)   return 0;
     else{
