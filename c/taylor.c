@@ -28,8 +28,8 @@ long double taylorExpansion(int n, double x){
 
 long double taylorExpansionInPureC(int n, double x){
     long double convergeTo = 0;
-    int fatorial = 1;
-    double potencia = 1;
+    long long int fatorial = 1;
+    long double potencia = 1;
     for(int i = 1; i < n + 1; i++){
         convergeTo += potencia/fatorial;
         fatorial = fatorial * i;
@@ -42,7 +42,7 @@ long double taylorExpansionInPureC(int n, double x){
 
 int main(){
 
-    int n = 20;
+    int n = 50;
     double x = 2;
 
     double convergeTo = taylorExpansion(n, x);
