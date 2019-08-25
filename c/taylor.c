@@ -3,8 +3,9 @@
 #include <math.h>
 
 long long fatorial(int n){
-    if (n <= 0) return 1;
-    else    return n * fatorial(n - 1);
+    long long fat = 1;
+    for(int i = 1; i < n + 1; i++)  fat *= i;
+    return fat;
 }
 
 /*
@@ -14,8 +15,8 @@ long long fatorial(int n){
     n -> number of terms
     x -> expoent
 */
-double taylorExpansion(int n, double x){
-    double convergeTo = 0;
+long double taylorExpansion(int n, double x){
+    long double convergeTo = 0;
 
     for(int i = 0; i < n; i++){
         convergeTo += pow(x, i)/fatorial(i);
@@ -28,12 +29,12 @@ double taylorExpansion(int n, double x){
 
 int main(){
 
-    int n = 20;
+    int n = 50;
     double x = 2;
 
     double convergeTo = taylorExpansion(n, x);
     
-    printf("Converge to  %g\n", convergeTo);
+    printf("Converge to  %lf \n", convergeTo);
 
 
     return 0;
