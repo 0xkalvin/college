@@ -26,15 +26,30 @@ long double taylorExpansion(int n, double x){
 
 }
 
+long double taylorExpansionInPureC(int n, double x){
+    long double convergeTo = 0;
+    int fatorial = 1;
+    double potencia = 1;
+    for(int i = 1; i < n + 1; i++){
+        convergeTo += potencia/fatorial;
+        fatorial = fatorial * i;
+        potencia *= x;
+    }
+    return convergeTo;
+}
+
+
 
 int main(){
 
-    int n = 50;
+    int n = 20;
     double x = 2;
 
     double convergeTo = taylorExpansion(n, x);
+    double convergeTo2 = taylorExpansionInPureC(n, x);
     
-    printf("Converge to  %lf \n", convergeTo);
+    printf("\nConverge to  %lf \n", convergeTo);
+    printf("Converge to  %lf \n", convergeTo2);
 
 
     return 0;
