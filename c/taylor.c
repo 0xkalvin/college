@@ -42,8 +42,8 @@ long double taylorExpansionInPureC(int n, double x){
 
 int main(){
 
-    int n = 50;
-    double x = 2;
+    int n = 10;
+    double x = 3;
 
     double convergeTo = taylorExpansion(n, x);
     double convergeTo2 = taylorExpansionInPureC(n, x);
