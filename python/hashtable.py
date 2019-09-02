@@ -14,11 +14,13 @@ class HashTable:
 
     def search(self, key):
         index = self.hash(key)
-        return self.array[index] if self.array[index] is not None else  "Chave nao existe"
+        return self.array[index] if self.array[index] is not None else  "Chave `{}` nao existe".format(key)
 
 
-
-
+    def delete(self, key):
+        index = self.hash(key)
+        self.array[index] = None
+        return
 
 
 if __name__ == "__main__":
@@ -27,4 +29,9 @@ if __name__ == "__main__":
     my_table.insert("Roger", "Verdinho")
 
     print(my_table.search("Roger"))
+    
     print(my_table.search("Kaique"))
+    
+    my_table.delete("Roger")
+    
+    print(my_table.search("Roger"))
