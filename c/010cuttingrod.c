@@ -47,9 +47,9 @@ int main(){
     int size = sizeof(arr)/sizeof(arr[0]); 
 
 
-    printf("Maximum profit found : %d \n", cuttingRodNaive(arr, size)); 
+    printf("NAIVE : %d \n", cuttingRodNaive(arr, size)); 
 
-    printf("Maximum profit found : %d \n", cuttingRodDynamic(arr, size)); 
+    printf("DYNAMIC : %d \n", cuttingRodDynamic(arr, size)); 
     
 
     return 0;
