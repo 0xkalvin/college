@@ -1,4 +1,5 @@
 import random
+from time import process_time
 
 # SORT ALGORITHM
 def selection_sort(l):
@@ -58,7 +59,7 @@ def fib1(n):
         a = b
         b = current
         arr.append(current)
-    return current, arr
+    return current
 
 def fib2(n):
     return n if n <= 1 else fib2(n-1) + fib2(n-2)
@@ -82,3 +83,29 @@ def max_array(array):
         max = max_array(array[1:])
         return max if max > array[0] else array[0]
 
+
+
+def benchmark(n, *args):
+    print("-" * 80)
+    for func in args:
+        print(func.__name__)
+        start = process_time()
+        try:
+            ret = func(n)
+            print("Result:", ret)
+        except RuntimeError as e:
+            print("Error:", e)
+        print("Time:", "{:.8f}".format(process_time() - start))
+        print()
+
+def dynamic_fib(n, computed={0: 0, 1: 1}):
+    if n not in computed:
+        computed[n] = dynamic_fib(n - 1, computed) + dynamic_fib(n - 2, computed)
+
+    return computed[n]
+
+
+benchmark(99, dynamic_fib)
+
+
+    
