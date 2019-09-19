@@ -1,16 +1,19 @@
-#include "queue.cpp"
+#include "queue.h"
 
 using namespace std;
 
 int main(){
 
-    Queue<int> q;
+    Queue q;
 
-    for(int i = 0; i < 10; i++){
-        q.enqueue(i*i);
-    }
+    for(int i = 0; i < 10; i++)  q.enqueue(i);
 
-    cout << "Removing element from queue" << q.dequeue();
+    q.print();
+
+     
+    for(int i = 0; i < 5; i++) q.dequeue();   
+
+    q.print();
 
     return 0;
 }

@@ -1,18 +1,21 @@
 #ifndef QUEUE_H
 #define QUEUE_H
+#include <iostream>
+#include "node.h"
 
-#include "../008stack/stack.cpp"
 
-template <typename T>
 class Queue{
+    
     private:
-        Stack<T> s1;
-        Stack<T> s2;
+        Node* front;
+        Node* rear;
+
     public:
         Queue();
         ~Queue();
-        void enqueue(int data);
-        int dequeue(); 
+        void enqueue(int value);
+        void dequeue();
+        void print();
 
 };
 

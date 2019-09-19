@@ -1,37 +1,64 @@
 #include "queue.h"
 
-
-template<typename T>
-Queue<T>::Queue(){
-    
+Queue::Queue()
+{
+    this->front = this->rear = NULL;
 }
 
-template<typename T>
-Queue<T>::~Queue(){
-    delete this->s1;
-    delete this->s2;
+Queue::~Queue()
+{
+    delete this->front;
+    delete this->rear;
 }
 
-template<typename T>
-void Queue<T>::enqueue(int data){
-    s1.push(data);
-    cout << "Data inserted into queue" <<endl;
-}
+void Queue::enqueue(int value)
+{
 
-template<typename T>
-int Queue<T>::dequeue(){
-    int x,y;
-    if(!s1.isEmpty()){
-        x = s1.pop();
-        s2.push(x);
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->data = value;
+    newNode->next = NULL;
+
+    if (this->front == NULL)
+    {
+        this->front = this->rear = newNode;
+    }
+    else
+    {
+        this->rear->next = newNode;
+        this->rear = newNode;
     }
 
-    y = s2.pop();
+    return;
+}
 
-    while(!s2.isEmpty()){
-        x = s2.pop();
-        s1.push(x);
+void Queue::dequeue()
+{
+    if (this->front == NULL)
+    {
+        printf("Queue is empty");
     }
+    else
+    {
+        Node *temp = this->front;
+        this->front = this->front->next;
+        free(temp);
+    }
+    return;
+}
 
-    return y
+void Queue::print()
+{
+
+    if (this->front == NULL)
+        printf("\nQueue is Empty!!!\n");
+    else
+    {
+        Node *temp = this->front;
+        while (temp->next != NULL)
+        {
+            printf(" %d", temp->data);
+            temp = temp->next;
+        }
+        printf(" %d\n", temp->data);
+    }
 }
