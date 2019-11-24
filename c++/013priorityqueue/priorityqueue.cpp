@@ -23,14 +23,14 @@ void PriorityQueue::enqueue(int v, int p)
     {
         this->front = this->rear = newNode;
     }
-    else if(this->front->priority < p){
+    else if(this->front->priority > p){
         newNode->next = this->front;
         this->front = newNode;
     }
     else
     {   
         Node* temp = this->front;
-        while(temp->next != NULL && temp->next->priority > p){
+        while(temp->next != NULL && temp->next->priority >= p){
             temp = temp->next;
         }
         
