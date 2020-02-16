@@ -1,2 +1,1 @@
-### COLLEGE PROGRAMMING EXERCISES 
-
+collection of codes and notes from college
