@@ -24,7 +24,7 @@ fraction add(fraction a, fraction b){
     return simplify(sum);
 }
 
-fraction mul(fraction a, fraction b){
+fraction mult(fraction a, fraction b){
     fraction r;
     r.d = a.d * b.d;
     r.n = a.n * b.n;
@@ -38,20 +38,39 @@ fraction divi(fraction a, fraction b){
     return simplify(r);
 }
 
+
 int main(void){
 
-    fraction a;
-    fraction b;
+    char operation;
+    fraction a, b;
+
+    printf("Enter the first fraction\n");
+    scanf("%d/%d", &a.n, &a.d);
+    printf("Enter the second fraction\n");
+    scanf("%d/%d", &b.n, &b.d);
+
+    printf("Select an operator (+ * / =)\n");
+    scanf(" %c",&operation);
+
+    switch (operation)
+    {
+    case '+':
+        printFraction(add(a,b));
+        break;
+    case '*':
+        printFraction(mult(a,b));
+        break;
+    case '/':
+        printFraction(divi(a,b));
+        break;
+    case '=':
+        printf(equal(a,b) ? "True\n" : "False\n");
+        break;
     
-    a.n = 1;
-    a.d = 2;
-    b.n = 1;
-    b.d = 4;
-    
-    printFraction(add(a,b));
-    printFraction(mul(a,b));
-    printFraction(divi(a,b));
-    printf("Is equal ? %d \n", equal(a, b));
+    default:
+        printf("No valid operation was chosen\n");
+        break;
+    }
 
     return 0;
 }
