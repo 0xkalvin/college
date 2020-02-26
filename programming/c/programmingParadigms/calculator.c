@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Imperative paradigm - Calculator exercise */
 
 typedef struct fraction {
     int d;
@@ -11,6 +12,10 @@ int gcd(int a, int b);
 void printFraction(fraction a);
 fraction simplify(fraction a);
 
+
+int equal(fraction a, fraction b){
+    return a.n * b.d == a.d * b.n;
+}
 
 fraction add(fraction a, fraction b){
     fraction sum;
@@ -46,6 +51,7 @@ int main(void){
     printFraction(add(a,b));
     printFraction(mul(a,b));
     printFraction(divi(a,b));
+    printf("Is equal ? %d \n", equal(a, b));
 
     return 0;
 }
