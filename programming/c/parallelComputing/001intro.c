@@ -54,12 +54,19 @@ void exercise4(){
     } else {
         printf("%s \n%s \n", name2, name1);
     }
-} 
+}
+
+void exercise12(){
+
+    char a = 'a';
+    printf("%d", a);
+
+}
 
 
 int main(void){
 
-    exercise4();
+    exercise12();
 
     return 0;
 }
