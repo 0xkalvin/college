@@ -8,7 +8,6 @@ typedef struct fraction {
     int n;
 } fraction;
 
-int gcd(int a, int b);
 void printFraction(fraction a);
 fraction simplify(fraction a);
 
