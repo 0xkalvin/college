@@ -43,7 +43,7 @@ int main(void){
     char operation;
     fraction a, b;
 
-    printf("Enter the first fraction\n");
+    printf("Enter the first fraction (e.g. 1/2)\n");
     scanf("%d/%d", &a.n, &a.d);
     printf("Enter the second fraction\n");
     scanf("%d/%d", &b.n, &b.d);
