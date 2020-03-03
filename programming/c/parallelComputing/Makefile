@@ -1,6 +1,13 @@
 
 
+file=002sharedmemory.c
+
+build:
+	gcc $(file)	-o	output
 
 
 run:
-	gcc *.c	-o	output && ./output
+	./output
+
+
+all: build run
