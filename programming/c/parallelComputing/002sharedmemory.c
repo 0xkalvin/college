@@ -1,3 +1,7 @@
+/*
+    Kalvin 31894666
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -6,7 +10,7 @@
 #include <sys/shm.h>
 #include <unistd.h>
 
-int main(void)
+int main(int argc, char *argv[])
 {
     int shmid;
     int *shmptr;
@@ -50,6 +54,11 @@ int main(void)
         printf("Back to parent process... \n");
         shmptr[0] = shmptr[0] - 1;
         printf("Subtracting shared variable by 1: %d \n", shmptr[0]);
+        shmdt((void *) shmptr);
+        printf("Program has detached its shared memory...\n");
+        shmctl(shmid, IPC_RMID, NULL);
+        printf("Program has removed its shared memory...\n");
+        printf("Program exiting...\n");
     }
 
     if (pid == 0)
