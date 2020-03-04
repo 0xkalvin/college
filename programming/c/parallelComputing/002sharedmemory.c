@@ -12,6 +12,11 @@ int main(int argc, char *argv[])
     int *shmptr;
     pid_t pid;
 
+    if(argc != 2){
+        printf(" Required integer argument should be passed \n");
+        exit(-1);
+    }
+
     shmid = shmget(IPC_PRIVATE, sizeof(int), IPC_CREAT | 0666);
 
     if (shmid < 0)
@@ -30,8 +35,8 @@ int main(int argc, char *argv[])
     }
 
     printf("Program has attached the shared memory...\n");
-
-    shmptr[0] = 100;
+   
+    shmptr[0] = atoi(argv[1]);
     printf("Program has initialized a value for the shared variable: %d \n", shmptr[0]);
 
     pid = fork();
