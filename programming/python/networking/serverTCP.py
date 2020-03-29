@@ -1,9 +1,10 @@
 import socket 
 
-TCP_IP = '192.168.15.14'    # Endereço IP do servidor 
-TCP_PORT = 24000           # Porta disponibilizada pelo servidor
-BUFFER_SIZE = 1024       # Definição do tamanho do buffer
- 
+TCP_IP = '192.168.15.14'
+TCP_PORT = 24000 
+BUFFER_SIZE = 1024
+ENCODING = 'UTF-8'
+
 # Criação de socket TCP
 # SOCK_STREAM, indica que será TCP.
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,25 +21,26 @@ print("Server listening on port %d" % (TCP_PORT))
 conn, addr = server.accept()
 print ('Address connected:', addr)
 
-while 1:
+while True:
 
     # Dados retidados da mensagem recebida de algum cliente
     data = conn.recv(BUFFER_SIZE)
-    
     if data: 
+        messageFromClient = data.decode(ENCODING)
+
         # Caso cliente envie uma mensagem de quit do chat, o servidor se encerra
-        if data.decode('UTF-8') == "quit":
+        if messageFromClient == "quit":
             print("Quitting...")
             conn.close()
             break
         
-        print ("Received message: ", data)
+        print ("Received message from client \n", messageFromClient)
         
-        message  = input("Enter your message for the client: ")
-        conn.send(message.encode())  
+        messageToClient  = input("Enter your message for the client: ")
+        conn.send(messageToClient.encode())  
         
         # Encerra chat
-        if message  == "quit":
+        if messageToClient  == "quit":
             print("Quitting...")
             conn.close()
             break
