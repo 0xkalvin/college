@@ -17,8 +17,9 @@ print("Server listening on port %d" % (UDP_PORT))
 while True:
     data, addr = server.recvfrom(BUFFER_SIZE)
     messageFromClient = data.decode(ENCODING)
-
+    
     if messageFromClient == "quit":
+        print("Quitting...")
         server.close()
         break
     
@@ -29,5 +30,6 @@ while True:
     server.sendto(messageToClient.encode(ENCODING), (addr[0], addr[1]))
 
     if messageToClient == "quit":
+        print("Quitting...")
         server.close()
         break

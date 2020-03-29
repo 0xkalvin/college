@@ -14,15 +14,18 @@ while True:
     client.sendto(messageToServer.encode(ENCODING), (UDP_IP, UDP_PORT))
 
     if messageToServer == "quit":
+        print("Quitting...")
         client.close()
         break
 
     data, addr = client.recvfrom(BUFFER_SIZE)
     messageFromServer = data.decode(ENCODING)
-    print("New message from server: \n", messageFromServer)
 
     if messageFromServer == "quit":
+        print("Quitting...")
         client.close()
         break
+    
+    print("New message from server: \n", messageFromServer)
     
 
