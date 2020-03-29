@@ -1,13 +1,13 @@
 import socket
 
 TCP_IP = '192.168.15.14'    # Endereço IP do servidor 
-TCP_PORTA = 24000           # Porta disponibilizada pelo servidor
-TAMANHO_BUFFER = 1024
+TCP_PORT = 24000           # Porta disponibilizada pelo servidor
+BUFFER_SIZE = 1024
 
 # Criação de socket TCP do cliente
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Conecta ao servidor em IP e porta especifica 
-client.connect((TCP_IP, TCP_PORTA))
+client.connect((TCP_IP, TCP_PORT))
 
 while True:
     message  = input("Enter your message for the server: ")
