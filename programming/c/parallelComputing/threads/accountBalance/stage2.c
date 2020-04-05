@@ -6,11 +6,11 @@
 #define AMOUNT_PER_DEPOSIT 10
 #define AMOUNT_PER_WITHDRAW 10
 
-pthread_mutex_t locker;
+pthread_mutex_t locker = PTHREAD_MUTEX_INITIALIZER;
 
-void* deposits(void *args){
+void* deposits(void *params){
 
-    int *currentBalance = (int*)args;
+    int *currentBalance = (int*)params;
 
     for (int i = 0; i < TOTAL_TRANSACTIONS; i++)
     {
@@ -21,9 +21,9 @@ void* deposits(void *args){
     }
 }
 
-void* withdrawals(void *args){
+void* withdrawals(void *params){
 
-    int *currentBalance = (int*)args;
+    int *currentBalance = (int*)params;
 
     for (int i = 0; i < TOTAL_TRANSACTIONS; i++)
     {
