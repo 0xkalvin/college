@@ -35,8 +35,15 @@ int main(void){
 
     printf("Initial balance is %d \n", balance);
 
-    deposits((void*)&balance);
-    withdrawals((void*)&balance);
+    pthread_t t1;
+    pthread_create(&t1, NULL, deposits, (void*)&balance);
+    
+    pthread_t t2;
+    pthread_create(&t2, NULL, withdrawals, (void*)&balance);
+
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
+
 
     printf("Final balance is %d \n", balance);
 
