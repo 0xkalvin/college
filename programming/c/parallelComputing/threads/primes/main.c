@@ -67,7 +67,7 @@ int main(void){
 
     for(int i = 0; i < END - START; i++){
         if(primes[i] != 0){
-            printf("%d ", primes[i]);
+            printf("%d \n", primes[i]);
         }
     }
 
