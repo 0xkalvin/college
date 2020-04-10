@@ -1,11 +1,11 @@
-package coordenada;
+package exercise;
 
-public class Ponto {
+public class Point {
 
 	private int x;
 	private int y;
 	
-	public Ponto(int x, int y) {
+	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -26,13 +26,18 @@ public class Ponto {
 		this.y = y;
 	}
 	
-	public boolean isEquals (Ponto ponto) {
-		return this.x == ponto.getX() && this.y == ponto.getY();
+	public boolean isEqual (Point point) {
+		return this.x == point.getX() && this.y == point.getY();
 	}
 	
-	public double distance(Ponto ponto) {
-		if(this.isEquals(ponto))
+	public double calculateDistance(Point point) {
+		if(this.isEqual(point))
 			return 0.0;
-		return Math.sqrt(Math.pow((ponto.getX() - this.x), 2) + (Math.pow((ponto.getY() - this.y), 2)));
+		return Math.sqrt(Math.pow((point.getX() - this.x), 2) + (Math.pow((point.getY() - this.y), 2)));
 	}
+
+	@Override
+    public String toString() { 
+        return String.format("( "+x ", " + y + " )"); 
+    } 
 }

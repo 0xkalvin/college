@@ -1,33 +1,19 @@
-package coordenada;
+package exercise;
 
 import java.util.Scanner;
 
-public class Cliente {
+public class Client {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-		int x = 0;
-		int y = 0;
-		Ponto ponto1 = null;
-		for (int i = 1; i <= 2; i++) {
-			System.out.printf("Digite um valor inteiro para o ponto %dX : ", i);
-			x = sc.nextInt();
-			System.out.printf("Digite um valor inteiro para o ponto %dY : ", i);
-			y = sc.nextInt();
-			if (i == 2)
-				break;
-			ponto1 = new Ponto(x, y);
-		}
-		Ponto ponto2= new Ponto(x, y);
+		Point p1 = new Point(10, 20);
+		Point p2 = new Point(1, 2);
 
-		System.out.println("A distancia entre os pontos é: " + ponto1.distance(ponto2));
-		if(ponto1.isEquals(ponto2)) {
-			System.out.println("Os pontos possuem a mesma coordenada.");
-		} else {
-			System.out.println("Os pontos possuem a mesma coordenada.");
-		}
-		sc.close();
+		System.out.println("p1 =  " + p1.toString());
+		System.out.println("p2 =  " + p2.toString());	
+		System.out.println("Is p1 equals to p2 ? " + p1.isEqual(p2));
+		System.out.println("The distance between p1 and p2 is " + p1.calculateDistance(p2));
+
 	}
 
 }
