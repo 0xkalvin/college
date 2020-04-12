@@ -129,11 +129,11 @@ void processWords(char words[MAX_LEN_WORDS]){
                     }
 
                 } else if(finalState == 5 || finalState == 6){
-                    printf("INTEIRO\n");
-                    fprintf(file,"INTEIRO\n");
+                    printf("INTEGER\n");
+                    fprintf(file,"INTEGER\n");
                 } else if(finalState == 2){
-                    printf("PONTO FLUTUANTE\n");       
-                    fprintf(file,"PONTO FLUTUANTE\n");
+                    printf("FLOATING POINT\n");       
+                    fprintf(file,"FLOATING POINT\n");
                 }  
                 
                 if(c == '\0'){ 
