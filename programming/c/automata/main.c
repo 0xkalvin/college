@@ -25,10 +25,8 @@ void processWords(char words[MAX_LEN_WORDS]){
     int size = getWordsLength(words);
     char c = words[0];
 
-
     while(i < size){
         back:            
-            
             c = words[i];
            
             q0:
@@ -141,6 +139,8 @@ void processWords(char words[MAX_LEN_WORDS]){
                 }
                 goto back;
     }
+
+    fclose(file);
 }
 
 int main(){
