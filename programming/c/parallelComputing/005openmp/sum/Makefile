@@ -3,9 +3,10 @@
 
 default: all
 
+arg=1
 
 build:
-	gcc -fopenmp main.c -o output
+	gcc -fopenmp sum${arg}.c -o output
 
 
 run:
