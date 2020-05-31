@@ -1,11 +1,9 @@
 .DS_Store
-
 node_modules
-
-.vscode/
-
-a.out
+.vscode
+*.out
+*.o
 run.sh
 __py*
-
+*.class
 output
