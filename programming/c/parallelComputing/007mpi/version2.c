@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
             }
         }
         printf("The max element in the dataset is %f ", max);
-        
+        free(dataset);        
 
     } else {
         printf("Worker %d { pid %d } is running \n", rank, getpid());
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
         float local_max = get_max_element_in_range(dataset_slice, N);
         printf("Worker %d local max is %f \n", rank, local_max);
         MPI_Send(&local_max, 1, MPI_FLOAT, 0, DEFAULT_TAG, MPI_COMM_WORLD);
-
+        free(dataset_slice);
     }
 
     MPI_Finalize();
