@@ -4,9 +4,10 @@ default: all
 
 COMPILER=mpicc
 N=4
+FILE=version2.c
 
 build:
-	${COMPILER} main.c -o output
+	${COMPILER} ${FILE} -o output
 
 run:
 	mpirun --host localhost:${N} -n ${N} ./output
